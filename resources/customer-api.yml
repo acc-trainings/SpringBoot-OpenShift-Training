@@ -3,7 +3,7 @@
 openapi: 3.0.0
 
 info:
-  title: "Customer Service"
+  title: "Customer API"
   version: "1.0.0"
   contact:
     name: Accenture
@@ -11,7 +11,7 @@ info:
     url: https://example.com/
 
 tags:
-  - name: Customer Service
+  - name: Customer API
     description: Customer Service related operations
     
 paths:
@@ -27,7 +27,7 @@ paths:
             type: string
           
       summary: Get customer details
-      tags: [ 'Customer Service' ]
+      tags: [ 'Customer API' ]
       responses:
         '200':
           description: OK
