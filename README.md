@@ -41,5 +41,5 @@ Few of the extensions should be pre-installed when you install Visual Studio Cod
 * Click on Extension tab from right panel on 
 * Search above mentioned extensions and install.
 
-![Visual Studio Code Extension](https://github.com/acc-trainings/customer-api/blob/main/img/vscode_extension.png =250x)
+![Visual Studio Code Extension](https://github.com/acc-trainings/customer-api/blob/main/img/vscode_extension.png?raw=true)
 
