@@ -25,8 +25,8 @@ This is a quick reference guide to understand usages of key components & capabil
 1.	Check hardware and software requirements
 2.	Check system compatibility with platform software
 3.	Download Visual Studio Code from following URL
-    * **Download:** https://code.visualstudio.com/Download 
-    * **Geeting Started:** https://code.visualstudio.com/docs/java/java-spring-boot
+    * **Download:** Click [here](https://code.visualstudio.com/Download) 
+    * **Geeting Started:** Click [here](https://code.visualstudio.com/docs/java/java-spring-boot)
     
 #### **`Visual Studio Code Required Plugins`**
 Few of the extensions should be pre-installed when you install Visual Studio Code. If you can't see then install from extension tab.
