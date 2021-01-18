@@ -18,7 +18,7 @@ This is a quick reference guide to understand usages of key components & capabil
 
 
 
-### `Visual Studio Code` ###
+### `IDE: Visual Studio Code` ###
 1.	Check hardware and software requirements
 2.	Check system compatibility with platform software
 3.	Download Visual Studio Code from following URL
