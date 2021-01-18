@@ -38,3 +38,4 @@ Few of the extensions should be pre-installed when you install Visual Studio Cod
 * Click on Extension tab from right panel on 
 * Search above mentioned extensions and install.
 
+
