@@ -12,6 +12,9 @@ This is a quick reference guide to understand usages of key components & capabil
 * Build code
 * Package & Deploy
 
+
+**`TODO`** - Upload Use Case diagram (restController, Serice layer, repository layer)
+
 ## Prerequisties
 
 #### **`Knowledge`**
