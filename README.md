@@ -14,6 +14,17 @@ This is a quick reference guide to understand usages of key components & capabil
 
 **`TODO`** - Upload Use Case diagram (restController, Serice layer, repository layer)
 
+## Tools & Technologies:
+* Spring Boot, Spring Cloud
+* Mongo database
+* Web Services (REST)
+* OpenShift Cloud
+* DevOps
+* Jenkins
+* Reactive Development
+* Visual Studio Code
+* Maven
+
 ## Prerequisties
 
 #### **`Knowledge`**
