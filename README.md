@@ -22,16 +22,19 @@ This is a quick reference guide to understand usages of key components & capabil
 1.	Check hardware and software requirements
 2.	Check system compatibility with platform software
 3.	Download Visual Studio Code from following URL
-    
-    Download: https://code.visualstudio.com/Download 
-
-    Geeting Started: https://code.visualstudio.com/docs/java/java-spring-boot
+    * **Download:** https://code.visualstudio.com/Download 
+    * **Geeting Started:** https://code.visualstudio.com/docs/java/java-spring-boot
     
 ### `Visual Studio Code Required Plugins` ###
+Few of the extensions should be pre-installed when you install Visual Studio Code. If you can't see then install from extension tab.
+1. Spring Boot Extension Pack - https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack
+2. Project Manager for Java - https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-dependency
+3. Maven for Java - https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-maven
+4. OpenAPI (Swagger) Editor - https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi
+5. OpenAPI Preview - https://marketplace.visualstudio.com/items?itemName=zoellner.openapi-preview
+6. openapi-lint - https://marketplace.visualstudio.com/items?itemName=mermade.openapi-lint
 
-1.	
-2. 
-3. 
-4. 
-5.
+#### Steps for installation
+* Click on Extension tab from right panel on 
+* Search above mentioned extensions and install.
 
