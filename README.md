@@ -34,7 +34,7 @@ Few of the extensions should be pre-installed when you install Visual Studio Cod
 5. [OpenAPI Preview](https://marketplace.visualstudio.com/items?itemName=zoellner.openapi-preview)
 6. [openapi-lint](https://marketplace.visualstudio.com/items?itemName=mermade.openapi-lint)
 
-#### Steps for installation
+#### `Steps for installation`
 * Click on Extension tab from right panel on 
 * Search above mentioned extensions and install.
 
