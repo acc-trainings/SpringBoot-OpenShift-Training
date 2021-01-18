@@ -15,8 +15,8 @@ This is a quick reference guide to understand usages of key components & capabil
 ## Prerequisties
 
 #### **`Knowledge`**
-
-
+* Basic understanding of Java (or any other programming language)
+* Basic understanding of data formats such as XML and JSON.
 
 #### **`IDE: Visual Studio Code`**
 1.	Check hardware and software requirements
