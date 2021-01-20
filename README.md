@@ -14,7 +14,7 @@ This is a quick reference guide to understand usages of key components & capabil
 
 **`TODO`** - Upload Use Case diagram (restController, Service layer, repository layer)
 
-## Training Schedule (fromDate - ToDate - TBD)
+## Training Schedule (`[YYYY-MM-DD] - [YYYY-MM-DD]`)
 * Day 1. [API First Development](https://github.com/acc-trainings/customer-api/tree/1.api-first-development)
 * Day 2. [Spring Boot Development](https://github.com/acc-trainings/customer-api/tree/2.spring-api-development)
 * Day 3. [Spring Boot - Maven Development](https://github.com/acc-trainings/customer-api/tree/2.spring-api-development)
