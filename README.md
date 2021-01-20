@@ -15,9 +15,9 @@ This is a quick reference guide to understand usages of key components & capabil
 **`TODO`** - Upload Use Case diagram (restController, Service layer, repository layer)
 
 ## Training Schedule (`[YYYY-MM-DD] - [YYYY-MM-DD]`)
-* Day 1. [API First Development](https://github.com/acc-trainings/customer-api/tree/1.api-first-development)
-* Day 2. [Spring Boot Development](https://github.com/acc-trainings/customer-api/tree/2.spring-api-development)
-* Day 3. [Spring Boot - Maven Development](https://github.com/acc-trainings/customer-api/tree/2.spring-api-development)
+* Day 1. Business Context, Microservices, Use Case, [API First Development](https://github.com/acc-trainings/customer-api/tree/1.api-first-development)
+* Day 2. Spring Boot Basics, [Spring Boot Development](https://github.com/acc-trainings/customer-api/tree/2.spring-api-development)
+* Day 3. Mongo DB Basics, [Spring Boot - Maven Development](https://github.com/acc-trainings/customer-api/tree/2.spring-api-development)
 * Day 4. Microservices Communication, Containerization & Orchestration & OpenShift
 * Day 5. DevOps
 * Day 6. Advance Topics - OpenShift in-depth, Reactive Programming
