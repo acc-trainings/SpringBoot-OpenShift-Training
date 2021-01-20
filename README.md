@@ -12,7 +12,7 @@ This is a quick reference guide to understand usages of key components & capabil
 * Build code
 * Package & Deploy
 
-**`TODO`** - Upload Use Case diagram (restController, Serice layer, repository layer)
+**`TODO`** - Upload Use Case diagram (restController, Service layer, repository layer)
 
 ## Training Schedule (fromDate - ToDate - TBD)
 Day 1. [API First Development](https://github.com/acc-trainings/customer-api/tree/1.api-first-development)
