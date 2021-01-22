@@ -105,3 +105,5 @@ components:
           description: Customer address
           example: 900 Main Street, 55 
 ```
+
+Copy and paste the above code into [Swagger Editor](https://editor.swagger.io/) to visualize the API design. 
