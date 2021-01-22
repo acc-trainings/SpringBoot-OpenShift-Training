@@ -41,8 +41,28 @@ paths:
           description: Customer Not Found
         '400':
           description: Invalid ID supplied
-
-
+          
+  /createCustomer:
+    post:
+      description: Create Customer
+      summary: Create Customer
+      tags: [ 'Customer API' ]
+      operationId: createCustomer
+      requestBody:
+        description: "Create Customer"
+        content:
+         application/json:
+          schema:
+            $ref: '#/components/schemas/Customer'   
+      responses:
+        '200':
+          description: Customer Create Successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
+        '500':
+           description: Internal Server       
 
 components:
   schemas:

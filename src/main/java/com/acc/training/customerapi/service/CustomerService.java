@@ -1,5 +1,7 @@
 package com.acc.training.customerapi.service;
 
+import javax.validation.Valid;
+
 import com.acc.training.customerapi.model.Customer;
 
 import org.springframework.stereotype.Service;
@@ -15,5 +17,9 @@ public class CustomerService {
         customer.setCustomerAddress("Hartford, CT");
         return customer;
     }
+
+	public Customer createCustomer(@Valid Customer body) {
+		return body;
+	}
 
 }
