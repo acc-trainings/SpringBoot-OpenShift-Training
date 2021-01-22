@@ -8,10 +8,11 @@ The OpenAPI Specification (OAS) defines a standard, language-agnostic interface 
 
 An OpenAPI definition can then be used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases.
 
-Getting Started: [Swagger OpenAPI Specification](https://swagger.io/specification/)
+**Getting Started:** [Swagger OpenAPI Specification](https://swagger.io/specification/)<br/>
+**Business Context, Local Setup, Use Case:** Click [here](https://github.com/acc-trainings/customer-api)<br/>
+**API Development:** Click [here](https://github.com/acc-trainings/customer-api/tree/2.spring-api-development) 
 
 ## Customer API Design
-Before proceeding with API Design, if you're not ready with localset up or use case, please click [here](https://github.com/acc-trainings/customer-api)
 
  ```
 openapi: 3.0.0
