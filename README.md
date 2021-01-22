@@ -14,7 +14,6 @@ Getting Started: [Swagger OpenAPI Specification](https://swagger.io/specificatio
 Before proceeding with API Design, if you're not ready with localset up or use case, please click [here](https://github.com/acc-trainings/customer-api)
 
  ```
-# I will develop from scratch on actual presentaion
 openapi: 3.0.0
 
 info:
