@@ -2,7 +2,7 @@
 
 # Spring Boot API Development
 
-[![Watch the video]](https://code.visualstudio.com/docs/java/java-spring-boot/spring-initializr.mp4)
+[!]](https://github.com/acc-trainings/customer-api/blob/main/img/spring-initializer.gif)
 
 
 
