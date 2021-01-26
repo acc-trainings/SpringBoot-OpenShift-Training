@@ -2,7 +2,7 @@
 
 # Spring Boot API Development
 
-#### **`Spring Initializr`**
+#### **`Spring Initializr`** - Create Project Structure
 ![spring-initializer](https://github.com/acc-trainings/customer-api/blob/main/img/spring-initializer.gif)
 
 #### **`POM`**
