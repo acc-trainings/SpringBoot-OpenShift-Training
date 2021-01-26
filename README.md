@@ -2,14 +2,10 @@
 
 # Spring Boot API Development
 
+#### **`Spring Initializr`**
 ![spring-initializer](https://github.com/acc-trainings/customer-api/blob/main/img/spring-initializer.gif)
 
-####Test
-![](https://github.com/acc-trainings/customer-api/blob/main/img/spring-initializr.mp4)
-
-
-
-
+#### ** `POM` **
 Update [POM](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#:~:text=A%20Project%20Object%20Model%20or,default%20values%20for%20most%20projects.) as following
 ```
 <?xml version="1.0" encoding="UTF-8"?>
