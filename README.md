@@ -2,7 +2,9 @@
 
 # Spring Boot API Development
 
-https://code.visualstudio.com/docs/java/java-spring-boot/spring-initializr.mp4
+[![Watch the video]](https://code.visualstudio.com/docs/java/java-spring-boot/spring-initializr.mp4)
+
+
 
 Update [POM](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#:~:text=A%20Project%20Object%20Model%20or,default%20values%20for%20most%20projects.) as following
 ```
