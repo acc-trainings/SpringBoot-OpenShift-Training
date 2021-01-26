@@ -105,8 +105,8 @@ Update [POM](https://maven.apache.org/guides/introduction/introduction-to-the-po
 </project>
 ```
 
-
-
+#### **`Run the application`**
+![run application](https://github.com/acc-trainings/customer-api/blob/main/img/run-spring.gif)
 
 
 
