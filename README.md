@@ -2,7 +2,9 @@
 
 # Spring Boot API Development
 
-![](https://github.com/acc-trainings/customer-api/blob/main/img/spring-initializer.gif)
+![spring-initializer](https://github.com/acc-trainings/customer-api/blob/main/img/spring-initializer.gif)
+
+####Test
 ![](https://github.com/acc-trainings/customer-api/blob/main/img/spring-initializr.mp4)
 
 
