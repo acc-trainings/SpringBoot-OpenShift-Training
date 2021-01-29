@@ -9,9 +9,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class CustomerService {
 
-    public Customer getCustomer(String id) {
+    public Customer getCustomer(String custId) {
         Customer customer = new Customer();
-        customer.id("12345");
         customer.setCustomerId("12345");
         customer.setCustomerName("Rahul");
         customer.setCustomerAddress("Hartford, CT");
