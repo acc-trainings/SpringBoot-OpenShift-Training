@@ -67,26 +67,26 @@ At this point of time, your source code repo is ready.
 ![pic1](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/2.Github_ConfigRepo_Setup/pic1.png)
 
 2.	This repo will be act as “Gold Copy” for the ArgoCD Config repo for DevOps demo.
-3.	Click on the “Code” section highlighted in Green and choose “Download ZIP’
-4.	The repo will be downloaded in the “downloaded” folder or any designated folder that your system is set for.
+3.	Click on the “Code” section highlighted in Green and choose “Download ZIP"
+4.	The repo will be downloaded in the “Download” folder or any designated folder that your system is set for.
 5.	Go to “Download” folder and navigate the repo which you have just downloaded. Unzip the folder.
 6.	Go to https://github.com/acc-trainings
-7.	Click on “New” Button to create a new repo.
+7.	Click on “New” Button to create a new repo
 8.	Name your repo name as “githubusername-ConfigRepo”
 
 **Note** This naming convention has kept as standard as there would be multiple users are going to create repo. This is to avoid conflicts in the repo name. 
 
 9.	Select “Public” , Check “ Add a README file”
 10.	Click on “Create repository”
-11.	An empty repo will be created. Go to your repo URL .
+11.	An empty repo will be created. Go to your repo URL
 12.	Click on the “Add file” option.
 13.	Click on “Upload Files”
-14.	Open the “download” folder where you have unzip the repo folder. Drag and drop all the files and folders from that location to here in this github repo.
+14.	Open the “Download” folder where you have unzipped the repo folder. Drag and drop all the files and folders from unzip folder location to here in this github repo.
 15.	Click on commit the changes. It should look something like below 
 
 ![pic2](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/2.Github_ConfigRepo_Setup/pic2.png)
 
-16.	 At this point of time, your source code repo is ready.
+16.	 At this point of time, your Config repo is ready.
 
 
 ## c.	Quay.io repo setup
@@ -112,7 +112,7 @@ At this point of time, your source code repo is ready.
 
 ![pic4](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/3.quay_setup/pic4.png)
 
-10.	Your repo in quay is all set.
+10.	Your repo in quay.io is all set.
 
 ## d.	Jenkins console setup
 
@@ -136,7 +136,7 @@ At this point of time, your source code repo is ready.
 ![pic4](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/4.Jenkins_console_setup/pic4.png)
 
 8.	Click on “Add Credentails” from left hand side menu.
-9.	 Provide User name and password for your “GitHub” account. 
+9.	Provide User name and password for your “GitHub” account. 
 10.	Provide the “ID” as unique name which can be identified for GitHub credentials
 11.	Provide “Description” as you want.
 
@@ -159,12 +159,12 @@ c.	Copy the username and Robot token
 
 ![pic8](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/4.Jenkins_console_setup/pic8.png)
 
-When both is done, your credential list should look like this :
+When both are done, your credential list should look like this :
 
 ![pic9](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/4.Jenkins_console_setup/pic9.png)
 
 
-## e.	Beforehand Changes in Jenkinsfile
+## e.	Jenkinsfile changes
 
 1.	Go to your Source code repo. In my case, it would be https://github.com/acc-trainings/customer-service-ketanchhatbar
 2.	Click on the Jenkinsfile and click on “Edit” icon to edit the file.
@@ -202,7 +202,7 @@ When both is done, your credential list should look like this :
 
 9.	Click on “ Commit Changes” . The Jenkinsfile setup is completed.
 
-## f.	Beforehand Changes in appdeploy.yaml file
+## f.	Appdeploy.yaml file changes
 
 1. Go to https://github.com/acc-trainings/customer-service-ketanchhatbar
 2. Navigate to “Deployment” folder. 
@@ -216,7 +216,7 @@ When both is done, your credential list should look like this :
 ![pic2](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/6.appdeployfile_changes/pic1.png)
 
 
-6. commit the changes and the appdeploy.yaml file setup is completed.
+6. Commit the changes and the appdeploy.yaml file setup is completed.
 
 ## g.	ArgoCD Setup
 
@@ -315,7 +315,7 @@ When both is done, your credential list should look like this :
 
 # 3.	Verify the deployments
 
-1. Let’s go to Quay.io and see , if you are able to see the latest image tag
+1. Let’s go to quay.io and see ,if you are able to see the latest image tag
 2. Go to https://quay.io/organization/necloudnativetraining
 3. Go to the repo that you have created here	 - https://quay.io/repository/necloudnativetraining/customer-service-ketanchhatbar
 4. Go to “Tag” Section and validate the tag name.
