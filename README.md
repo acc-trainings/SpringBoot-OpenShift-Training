@@ -90,6 +90,30 @@ At this point of time, your source code repo is ready.
 
 
 ## c.	Quay.io repo setup
+
+1.	Go to https://quay.io/organization/necloudnativetraining
+2.	Click on the “Create New Repository”  
+
+![pic1](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/3.quay_setup/Pic1.png)
+
+3.	Give a standard repo name as “customer-servcie-yourgithubusername”
+4.	Select “Public”
+5.	Select “Empty repository”
+6.	Click on “Create Public Repository” to create a repo in quay.
+
+![pic2](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/3.quay_setup/pic2.png)
+
+7.	Select newly created repository and go to “settings” tab on left hand side bar.
+
+![pic3](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/3.quay_setup/pic3.png)
+
+8.	In “User and Robot Permission” Section, select “necloudnativetrainingteam” and provide “write” permission and click on “Add Permission”
+9.	In “User and Robot Permission” Section, select “necloudnativetraining+openshift_robo_user” and provide “write” permission and click on “Add Permission”
+
+![pic4](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/3.quay_setup/pic4.png)
+
+10.	Your repo in quay is all set.
+
 ## d.	Jenkins console setup
 ## e.	Beforehand Changes in Jenkinsfile
 ## f.	Beforehand Changes in appdeploy.yaml file
