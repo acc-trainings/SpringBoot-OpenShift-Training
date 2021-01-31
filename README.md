@@ -16,7 +16,10 @@ Lets start with step by step instructions for setup.
 3.	This repo will be act as “Gold Copy” for the source code for DevOps demo.
 4.	Click on the “Code” section highlighted in Green and choose “Download ZIP”
 
-----> Pic 1  <<-
+
+https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/1.Github_SourceCode_Setup/pic1.png
+
+
 5.	The repo will be downloaded in the “downloaded” folder or any designated folder that your system is set for.
 6.	Go to “Download” folder and navigate the repo which you have just downloaded. Unzip the folder.
 7.	 Go to https://github.com/acc-trainings.
