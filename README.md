@@ -4,7 +4,7 @@ This readme file is having step by steps instruction to configure the setup for 
 * Running CI/CD Pipeline job
 * Verify the deployments
 
-Any user should go through the these steps while planning to setup the configuration.
+Any user should go through these steps while planning to setup for the configuration.
 
 Lets start with step by step instructions for setup.
 
