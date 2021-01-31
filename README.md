@@ -203,7 +203,143 @@ When both is done, your credential list should look like this :
 9.	Click on “ Commit Changes” . The Jenkinsfile setup is completed.
 
 ## f.	Beforehand Changes in appdeploy.yaml file
+
+1. Go to https://github.com/acc-trainings/customer-service-ketanchhatbar
+2. Navigate to “Deployment” folder. 
+3. Click on edit for “appdeploy.yaml” file
+4. Update Line No. 4,17,44  & 49 and update the name as “customer-service-yourgithubusername” . This name will be used in ArgoCD Application setup which has to be unique.
+
+![pic1](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/6.appdeployfile_changes/pic2.png)
+
+5. Update Line No. 31 with the quay repo name that you have created in quay.io.
+
+![pic2](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/6.appdeployfile_changes/pic1.png)
+
+
+6. commit the changes and the appdeploy.yaml file setup is completed.
+
 ## g.	ArgoCD Setup
 
+1. Go to https://argocd-server-argocd.apps.awsopenshift.ne-innovation.com
+2. Provide username and password to sign in.
+
+![pic1](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/7.Argocd_setup/pic1.png)
+
+3. Go to “Manage your Repo” icon on left hand side panel 
+
+![pic2](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/7.Argocd_setup/pic2.png)
+
+4. Click on “Repository” option.
+
+![pic3](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/7.Argocd_setup/pic3.png)
+
+5. click on “Connect Repo using HTTPS” option.
+
+![pic4](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/7.Argocd_setup/pic4.png)
+
+6. Provide the Config Repo URL which you have created in Github and provide github user name and password to connect to the repo.
+
+![pic5](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/7.Argocd_setup/pic5.png)
+
+7. Click on connect. The connection should need to be successful. It should look like as below :
+
+![pic6](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/7.Argocd_setup/pic6.png)
+
+8. Go to “Manage your Application” tab from Left hand side panel
+
+![pic7](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/7.Argocd_setup/pic7.png)
+
+9. Click on “New App”
+
+![pic8](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/7.Argocd_setup/pic8.png)
+
+10.	Provide application name as what you have given in your appdeploy.yaml file, which would be “customer-service-yourgithubusername”
+11.	Provide Project as”default”
+12.	Set “Sync Policy” to “Autometic”
+13.	Select the config repo from drop down of “Repository URL” option
+14.	Revision should be “HEAD”
+15.	Path needs to be set as “.” (dot)
+16.	Select default cluster URL 
+17.	Provide the namespace to “springboot-workshop-feb-2021”
+
+![pic9](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/7.Argocd_setup/pic9.png)
+![pic10](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/7.Argocd_setup/pic10.png)
+![pic11](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/7.Argocd_setup/pic11.png)
+
+
+18.	Click on “Create”. This will create an application in ArgoCD.
+
+![pic12](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/7.Argocd_setup/pic12.png)
+
+
+
 # 2.	Running CI/CD Pipeline job
+
+1. Go to https://jenkins-jenkins-ne-demo.apps.awsopenshift.ne-innovation.com/
+2. Click on “New Item” from left hand side menu
+
+![pic1](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/8.Running_pipeline_setup/pic1.png)
+
+3. 	Provide the name of the pipeline job and select the “Pipeline” Option and click OK.
+
+![pic2](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/8.Running_pipeline_setup/pic2.png)
+
+4.  The Pipeline job will be opened in Edit mode. Got o “Advanced Project Option” 
+5. select the definition as “Pipeline script from SCM”
+6. Select “SCM” as “Git”
+7. Provide repo URL as the Source Code git repo where you have saved your Jenkinsfile
+8. Select the Github Credential from drop down . This is the one which you have created beforehand in credentials section.
+9. set “Branch to build” as “*/main”
+10. Provide the Jenkinsfile name in “Script Path” option.
+
+
+![pic3](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/8.Running_pipeline_setup/pic3.png)
+
+11.	Click on Save.
+12.	Go to Pipeline job and click on “Build Now”
+
+![pic4](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/8.Running_pipeline_setup/pic4.png)
+
+13.	The pipeline job will start running
+
+![pic5](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/8.Running_pipeline_setup/pic5.png)
+
+14.	Go to console output section to check the progress of the job
+
+![pic6](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/8.Running_pipeline_setup/pic6.png)
+
+15. The Pipeline job is completed Now. 
+
+![pic7](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/8.Running_pipeline_setup/pic7.png)
+
+
 # 3.	Verify the deployments
+
+1. Let’s go to Quay.io and see , if you are able to see the latest image tag
+2. Go to https://quay.io/organization/necloudnativetraining
+3. Go to the repo that you have created here	 - https://quay.io/repository/necloudnativetraining/customer-service-ketanchhatbar
+4. Go to “Tag” Section and validate the tag name.
+
+![pic1](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/9.Verify_deployments/pic1.png)
+
+5. Go to Argocd Tool and select the application that you have created.
+https://argocd-server-argocd.apps.awsopenshift.ne-innovation.com/applications
+6. The deployment is synced successfully as you can see the Sync OK and Synced status is shown Green.
+
+
+![pic2](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/9.Verify_deployments/pic2.png)
+
+7. Go to OpenShift: 
+https://console-openshift-console.apps.awsopenshift.ne-innovation.com/k8s/cluster/projects
+8. Click on “springboot-workshop-feb-2021” project’
+https://console-openshift-console.apps.awsopenshift.ne-innovation.com/k8s/cluster/projects/springboot-workshop-feb-2021
+
+![pic3](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/9.Verify_deployments/pic3.png)
+
+9.  Click on Pods
+10. You should be able to see 3 Pods with the naming convention that you have given in the appdeploy.yaml file. 
+
+![pic4](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/9.Verify_deployments/pic4.png)
+
+This concludes the deployment to Openshift via ArgoCD with the help of CICD.
+
