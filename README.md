@@ -115,6 +115,55 @@ At this point of time, your source code repo is ready.
 10.	Your repo in quay is all set.
 
 ## d.	Jenkins console setup
+
+1. Go to https://jenkins-jenkins-ne-demo.apps.awsopenshift.ne-innovation.com/
+2.  click on “Login with OpenShift”
+3.  click on “oktaidp” 
+4.  click on the username section on top right corner 
+
+![pic1](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/4.Jenkins_console_setup/pic1.png)
+
+5.  click on the “credentials” menu on lift hand side pane.
+
+![pic2](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/4.Jenkins_console_setup/pic2.png)
+
+6.	Click on Jenkins from “Stores from Parent” Section 
+
+![pic3](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/4.Jenkins_console_setup/pic3.png)
+
+7.	Click on “Global Credentials (unrestricted) “ option
+
+![pic4](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/4.Jenkins_console_setup/pic4.png)
+
+8.	Click on “Add Credentails” from left hand side menu.
+9.	 Provide User name and password for your “GitHub” account. 
+10.	Provide the “ID” as unique name which can be identified for GitHub credentials
+11.	Provide “Description” as you want.
+
+![pic5](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/4.Jenkins_console_setup/pic5.png)
+
+
+6.	Follow the same steps from step 9 
+7.	Provide user name and password for “quay” account. Here the user name and password will come from:
+a.	Go to https://quay.io/organization/necloudnativetraining?tab=robots
+b.	Click on the “Account name” 
+
+![pic6](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/4.Jenkins_console_setup/pic6.png)
+
+c.	Copy the username and Robot token
+
+![pic7](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/4.Jenkins_console_setup/pic7.png)
+
+14.	Paste the username in “username” section of credentials
+15.	Paste the Robot token in “password” section of the credentials 
+
+![pic8](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/4.Jenkins_console_setup/pic8.png)
+
+When both is done, your credential list should look like this :
+
+![pic9](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/4.Jenkins_console_setup/pic9.png)
+
+
 ## e.	Beforehand Changes in Jenkinsfile
 ## f.	Beforehand Changes in appdeploy.yaml file
 ## g.	ArgoCD Setup
