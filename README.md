@@ -165,6 +165,43 @@ When both is done, your credential list should look like this :
 
 
 ## e.	Beforehand Changes in Jenkinsfile
+
+1.	Go to your Source code repo. In my case, it would be https://github.com/acc-trainings/customer-service-ketanchhatbar
+2.	Click on the Jenkinsfile and click on “Edit” icon to edit the file.
+
+![pic9](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/5.Jenkinsfile_changes/pic9.png)
+
+3.	Go to line No. 24 and update the repository name in which your Jenkinsfile is residing.
+
+![pic8](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/5.Jenkinsfile_changes/pic8.png)
+
+4.	Go to Line no  45 , 58 & 70 and replace the “credentialsID “ with the quayID that you have created in Jenkins console. 
+
+![pic7](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/5.Jenkinsfile_changes/pic7.png)
+
+5.	Go to Line No. 60 & 73 and replace the repo name with the one that you have created in quay.io repo.
+
+![pic6](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/5.Jenkinsfile_changes/pic6.png)
+
+![pic5](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/5.Jenkinsfile_changes/pic5.png)
+
+
+6.	Go to Line no. 84 and replace the credential ID with the GithubID that you have setup in Jenkins console. 
+
+![pic4](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/5.Jenkinsfile_changes/pic4.png)
+
+7.	Go to Line No. 88, 89, 100 & 101  and update your github username and email id 
+
+![pic3](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/5.Jenkinsfile_changes/pic3.png)
+
+8.	Go to Line 91 and 108 and update the ArgoCD config Repo URL 
+
+![pic2](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/5.Jenkinsfile_changes/pic2.png)
+
+![pic1](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/5.Jenkinsfile_changes/Pic1.png)
+
+9.	Click on “ Commit Changes” . The Jenkinsfile setup is completed.
+
 ## f.	Beforehand Changes in appdeploy.yaml file
 ## g.	ArgoCD Setup
 
