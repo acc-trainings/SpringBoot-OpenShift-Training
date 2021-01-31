@@ -49,15 +49,46 @@ Lets start with step by step instructions for setup.
 ![pic5](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/1.Github_SourceCode_Setup/pic5.png)
 
 
+
 16.	Click on commit the changes. It should look something like below 
 
+
 ![pic6](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/1.Github_SourceCode_Setup/pic6.png)
+
 
 At this point of time, your source code repo is ready.
 
 
-
 ## b.	GitHub Setups for ArgoCD config repo
+
+1.	Go to https://github.com/acc-trainings repo and search for “GoldCopyDevOps-ConfigRepo” repo.
+
+
+![pic1](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/2.Github_ConfigRepo_Setup/pic1.png)
+
+2.	This repo will be act as “Gold Copy” for the ArgoCD Config repo for DevOps demo.
+3.	Click on the “Code” section highlighted in Green and choose “Download ZIP’
+4.	The repo will be downloaded in the “downloaded” folder or any designated folder that your system is set for.
+5.	Go to “Download” folder and navigate the repo which you have just downloaded. Unzip the folder.
+6.	Go to https://github.com/acc-trainings
+7.	Click on “New” Button to create a new repo.
+8.	Name your repo name as “githubusername-ConfigRepo”
+
+**Note** This naming convention has kept as standard as there would be multiple users are going to create repo. This is to avoid conflicts in the repo name. 
+
+9.	Select “Public” , Check “ Add a README file”
+10.	Click on “Create repository”
+11.	An empty repo will be created. Go to your repo URL .
+12.	Click on the “Add file” option.
+13.	Click on “Upload Files”
+14.	Open the “download” folder where you have unzip the repo folder. Drag and drop all the files and folders from that location to here in this github repo.
+15.	Click on commit the changes. It should look something like below 
+
+![pic2](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/2.Github_ConfigRepo_Setup/pic2.png)
+
+16.	 At this point of time, your source code repo is ready.
+
+
 ## c.	Quay.io repo setup
 ## d.	Jenkins console setup
 ## e.	Beforehand Changes in Jenkinsfile
