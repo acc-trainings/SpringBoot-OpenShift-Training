@@ -17,7 +17,7 @@ Lets start with step by step instructions for setup.
 4.	Click on the “Code” section highlighted in Green and choose “Download ZIP”
 
 
-https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/1.Github_SourceCode_Setup/pic1.png
+![pic1](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/1.Github_SourceCode_Setup/pic1.png)
 
 
 5.	The repo will be downloaded in the “downloaded” folder or any designated folder that your system is set for.
@@ -25,7 +25,7 @@ https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/1.Github_Source
 7.	 Go to https://github.com/acc-trainings.
 8.	Click on “New” Button to create a new repo.
 
---- pic 2
+![pic2](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/1.Github_SourceCode_Setup/pic2.png)
 
 9.	Name your repo name as “customer-service-githubusername”
 
@@ -34,24 +34,24 @@ https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/1.Github_Source
 10.	Select “Public” , Check “ Add a README file”
 11.	Click on “Create repository”
 
---- Pic 3
+![pic3](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/1.Github_SourceCode_Setup/pic3.png)
 
 12.	An empty repo will be created. Go to your repo URL .
 13.	Click on the “Add file” option.
 14.	Click on “Upload Files”
 
--- pic 4
+![pic4](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/1.Github_SourceCode_Setup/pic4.png)
 
 
 15.	Open the “download” folder where you have unzip the repo folder. Drag and drop all the files and folders from that location to here in this github repo.
 
 
----pic 5 
+![pic5](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/1.Github_SourceCode_Setup/pic5.png)
 
 
 16.	Click on commit the changes. It should look something like below 
 
-----pic 6
+![pic6](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/1.Github_SourceCode_Setup/pic6.png)
 
 At this point of time, your source code repo is ready.
 
