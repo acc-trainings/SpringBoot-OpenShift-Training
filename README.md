@@ -43,7 +43,7 @@ Lets start with step by step instructions for setup.
 ![pic4](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/1.Github_SourceCode_Setup/pic4.png)
 
 
-15.	Open the “download” folder where you have unzip the repo folder. Drag and drop all the files and folders from that location to here in this github repo.
+15.	Open the “Download” folder where you had unzipped the repo folder. Drag and drop all the files and folders from unzip folder location to here in this github repo.
 
 
 ![pic5](https://github.com/acc-trainings/customer-api/blob/5.DevOps-CICD/1.Github_SourceCode_Setup/pic5.png)
