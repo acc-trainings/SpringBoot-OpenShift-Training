@@ -27,6 +27,11 @@ public class CustomerController implements CustomerApi, CreateCustomerApi {
         }
 
         Customer customer = customerService.getCustomer(id);
+
+        if(null == customer) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+
         return ResponseEntity.status(HttpStatus.OK).body(customer);
     }
 
