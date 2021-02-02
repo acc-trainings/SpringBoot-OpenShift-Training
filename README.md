@@ -6,7 +6,7 @@ This is a quick reference guide to understand usages of key components & capabil
 ![Software Development Lifecycle](https://github.com/acc-trainings/customer-api/blob/main/img/sdlc.png?raw=true)
 
 
-## Training Schedule (`[YYYY-MM-DD] - [YYYY-MM-DD]`)
+## Training Schedule (`[2021-02-15] - [2021-02-26]`)
 * Day 1. Business Context, Microservices, Use Case, [API First Development](https://github.com/acc-trainings/customer-api/tree/1.api-first-development)
 * Day 2. Spring Boot Basics, [Spring Boot Development](https://github.com/acc-trainings/customer-api/tree/2.spring-api-development)
 * Day 3. Mongo DB Basics, [Spring Boot - Maven Development](https://github.com/acc-trainings/customer-api/tree/2.spring-api-development)
