@@ -43,13 +43,14 @@ This is a quick reference guide to understand usages of key components & capabil
 * Basic understanding of data formats such as XML and JSON.
 * Basic understanding of YMAL.
 
-#### **`IDE: Visual Studio Code`**  &  **`JDK`**
+#### **`Required Software`**
 1.	Check hardware and software requirements
 2.	Check system compatibility with platform software
 3. Install JDK Version **11.0.10_9** from [here](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.10+9/OpenJDK11U-jdk_x64_mac_hotspot_11.0.10_9.pkg)
-3.	Download Visual Studio Code from following URL
+4.	Download Visual Studio Code from following URL
     * **Download:** Click [here](https://code.visualstudio.com/Download) 
     * **Geeting Started:** Click [here](https://code.visualstudio.com/docs/java/java-spring-boot)
+5. GitHub Desktop - [Download](https://desktop.github.com/)    
     
 #### **`Visual Studio Code Required Plugins`**
 Few of the extensions should be pre-installed when you install Visual Studio Code. If you can't see then install from extension tab.
