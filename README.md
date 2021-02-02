@@ -41,6 +41,7 @@ This is a quick reference guide to understand usages of key components & capabil
 #### **`Knowledge`**
 * Basic understanding of Java (or any other programming language)
 * Basic understanding of data formats such as XML and JSON.
+* Basic understanding of YMAL.
 
 #### **`IDE: Visual Studio Code`**  &  **`JDK`**
 1.	Check hardware and software requirements
