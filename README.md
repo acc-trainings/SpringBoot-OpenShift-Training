@@ -42,8 +42,7 @@ Starting with Red Hat OpenShift Service Mesh 1.1.11, you must install the Elasti
 
 All the Operators will be installed as part of project creation. Please confim that istio system project:  acctrainings-istio-system-<your first name> has all the operators in ready state.
 
-You should see following screen in OpenShift console where all operators are installed state.
-        
+You should see following screen in OpenShift console where all operators are installed state.        
       ![LogInToken](https://github.com/acc-trainings/customer-api/blob/6.service-mesh/img/installedOperators.JPG)
 
 ### **`Deploying the Red Hat OpenShift Service Mesh control plane`**  
