@@ -17,11 +17,11 @@ An OpenAPI definition can then be used by documentation generation tools to disp
 ## Customer API Design
 
  ```
-openapi: 3.0.0
+openapi: 3.0.2
 
 info:
-  title: "Customer API"
-  version: "1.0.0"
+  title: Customer API
+  version: '1.0.0'
   contact:
     name: Accenture
     email: contact@example.com
@@ -32,6 +32,28 @@ tags:
     description: Customer Service related operations
     
 paths:
+  /customer:
+    post:
+      description: Create Customer
+      summary: Create Customer
+      tags: [ 'Customer API' ]
+      operationId: createCustomer
+      requestBody:
+        description: "Create Customer"
+        content:
+         application/json:
+          schema:
+            $ref: '#/components/schemas/Customer'   
+      responses:
+        '200':
+          description: Customer Create Successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
+        '500':
+           description: Internal Server
+
   /customer/{id}:
     get:
       operationId: getCustomer
@@ -59,28 +81,6 @@ paths:
         '400':
           description: Invalid ID supplied
           
-  /createCustomer:
-    post:
-      description: Create Customer
-      summary: Create Customer
-      tags: [ 'Customer API' ]
-      operationId: createCustomer
-      requestBody:
-        description: "Create Customer"
-        content:
-         application/json:
-          schema:
-            $ref: '#/components/schemas/Customer'   
-      responses:
-        '200':
-          description: Customer Create Successfully
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Customer'
-        '500':
-           description: Internal Server       
-
 components:
   schemas:
     Customer:
@@ -102,7 +102,7 @@ components:
         customerAddress:
           type: string
           description: Customer address
-          example: 900 Main Street, 55 
+          example: 900 Main Street, 55  
 
 ```
 
