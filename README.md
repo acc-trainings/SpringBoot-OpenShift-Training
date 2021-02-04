@@ -111,18 +111,24 @@ Follow this procedure to add a project to the ServiceMeshMemberRoll from the com
 
 * Run the following command to apply gateway:
    ```javascript
-       oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/customer-api/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/acctrainings-gateway.yaml
+        oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/customer-api/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/acctrainings-gateway.yaml
    ```
 ### **`Creating Virtual Service`** 
 
 * Look at the config [here](https://github.com/acc-trainings/customer-api/blob/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/Policy-service-virtual-service.yaml), it has settings routing traffic to application
 *  Run the following command to apply Virtual Service:
     ```javascript
-       oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/customer-api/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/Policy-service-virtual-service.yaml
+        oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/customer-api/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/Policy-service-virtual-service.yaml
     ```
 ### **`Inject Side Car`** 
 
 * Open the application’s configuration YAML file in an editor.
-* Add sidecar.istio.io/inject to the deployment configuration YAML with a value of "true"
+* Add sidecar to the deployments configuration YAML with a value of "true" under metadata.annotations
+    ```javascript
+        metadata:
+          annotations:
+            openshift.io/generated-by: OpenShiftWebConsole
+            sidecar.istio.io/inject: 'true'
+    ```
 * Check POD of the service - it will have 2 container in same pod
 * Test with istio gateway path
