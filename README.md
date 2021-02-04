@@ -50,7 +50,6 @@ You should see following screen in OpenShift console where all operators are ins
 To install servicemesh control plane, follow below procedures:
 
 * If project is not created, you can create by running following command
-
         ```sh
             oc new-project acctrainings-istio-system-<your first name>
         ```
@@ -64,7 +63,6 @@ To install servicemesh control plane, follow below procedures:
            oc get smcp -n acctrainings-istio-system-<your first name>
         ```
   The installation has finished successfully when the READY column is true.
-
        ```sh
           NAME           READY
           basic-install   True
@@ -74,7 +72,6 @@ To install servicemesh control plane, follow below procedures:
           oc get pods -n acctrainings-istio-system-<your first name> -w
        ```
   Examlpe output
-
       ```sh
         NAME                                     READY   STATUS             RESTARTS   AGE
         grafana-7bf5764d9d-2b2f6                 2/2     Running            0          28h
