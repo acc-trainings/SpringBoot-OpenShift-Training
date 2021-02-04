@@ -21,11 +21,15 @@ public class CustomerController implements CustomerApi {
     @Override
     public ResponseEntity<Customer> getCustomer(String id) {
 
-        if (!StringUtils.hasText(id)) {
+        if (!StringUtils.hasText(id) || (id.length() <5 || id.length()>8)) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
 
         Customer customer = customerService.getCustomer(id);
+        
+        if(null == customer){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
         return ResponseEntity.status(HttpStatus.OK).body(customer);
     }
 
