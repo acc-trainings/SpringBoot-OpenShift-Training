@@ -50,9 +50,9 @@ You should see following screen in OpenShift console where all operators are ins
 To install servicemesh control plane, follow below procedures:
 
 * If project is not created, you can create by running following command
-        ```sh
+   ```javascript
             oc new-project acctrainings-istio-system-<your first name>
-        ```
+   ```
 * Create a ServiceMeshControlPlane file named istio-servicemeshmemberroll-default.yaml. [Click here](https://github.com/acc-trainings/customer-api/tree/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh) for location. You can customize the values as needed to match your use case.
 * Run the following command to deploy the control plane:
         ```sh
