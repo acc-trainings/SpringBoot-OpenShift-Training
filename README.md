@@ -1,69 +1,44 @@
-# Customer API
+# Spring boot Cloud Native using OpenShift Service Mesh
 
 ## Objective
-This is a quick reference guide to understand usages of key components & capabilities in this training that trainee may require during api design and build phase. It also contains details and references to help you to getting started with initial set-up for development environemt, IDE for coding and other tool technologies which enable you to design, develop and deploy the customer-api. We will follow following Software/API Development LifeCycle during this training.
-
-![Software Development Lifecycle](https://github.com/acc-trainings/customer-api/blob/main/img/sdlc.png?raw=true)
-
-
-## Training Schedule (**`2021-02-15 - 2021-02-26`**)
-* Day 1. Business Context, Microservices, Use Case, [API First Development](https://github.com/acc-trainings/customer-api/tree/1.api-first-development)
-* Day 2. Spring Boot Basics, [Spring Boot Development](https://github.com/acc-trainings/customer-api/tree/2.spring-api-development)
-* Day 3. Mongo DB Basics, [Spring Boot - Maven Development](https://github.com/acc-trainings/customer-api/tree/2.spring-api-development)
-* Day 4. [Microservices Communication](https://github.com/acc-trainings/customer-api/tree/4.microservices-communication), Containerization & Orchestration & OpenShift 
-* Day 5. [DevOps](https://github.com/acc-trainings/customer-api/tree/5.DevOps-CICD)
-* Day 6. Advance Topics - OpenShift in-depth, Reactive Programming
-
-## Use Case
-* Design customer service using swagger open API
-   * Create customer
-   * Get customer
-* Establish contract between API specification and business need
-* Generate code from API
-* Build code
-* Package & Deploy
-
-**`TODO`** - Upload Use Case diagram (restController, Service layer, repository layer)
-
-## Tools & Technologies
-* Spring Boot, Spring Cloud
-* Mongo database
-* Web Services (REST)
-* OpenShift Cloud
-* DevOps
-* Jenkins
-* Reactive Development
-* Visual Studio Code
-* Maven
+This is a quick reference guide with step by step instructions on how you can setup service mesh on openshift platform and enable service communication between Policy and Customer service. 
 
 ## Prerequisties
 
-#### **`Knowledge`**
-* Basic understanding of Java (or any other programming language)
-* Basic understanding of data formats such as XML and JSON.
+### **`Knowledge`**
+* Basic understanding Openshift.
 * Basic understanding of YMAL.
+* Basic understanding of quay registry.
 
-#### **`Required Software`**
-1.	Check hardware and software requirements
-2.	Check system compatibility with platform software
-3. Install JDK Version **11.0.10_9** from [here](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.10+9/OpenJDK11U-jdk_x64_mac_hotspot_11.0.10_9.pkg)
-4.	Download Visual Studio Code from following URL
-    * **Download:** Click [here](https://code.visualstudio.com/Download) 
-    * **Geeting Started:** Click [here](https://code.visualstudio.com/docs/java/java-spring-boot)
-5. GitHub Desktop - [Download](https://desktop.github.com/)    
-    
-#### **`Visual Studio Code Required Plugins`**
-Few of the extensions should be pre-installed when you install Visual Studio Code. If you can't see then install from extension tab.
-* [Spring Boot Extension Pack](https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack)
-* [Project Manager for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-dependency)
-* [Maven for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-maven)
-* [OpenAPI (Swagger) Editor](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi)
-* [OpenAPI Preview](https://marketplace.visualstudio.com/items?itemName=zoellner.openapi-preview)
-* [openapi-lint](https://marketplace.visualstudio.com/items?itemName=mermade.openapi-lint)
+### **`installed Softwares`**
+* OpenShift CLI
+* Any text editor
 
-#### **`Steps for installation`**
-* Click on Extension tab from right panel on Visual Studio Code IDE.
-* Search above mentioned extensions and click on install.
+### **`Application Deployment`**
+* Namespace for istio system is already create  with name - acctrainings-istio-system-<your first name>
+* Namespace for applications is already create  with name - acctrainings-<your first name>
+* Customer service is deployed using Deployments configuration in application namespace
+* Version 1 of Policy Service is deployed using Deployments configuration in application namespace
 
-![Visual Studio Code Extension](https://github.com/acc-trainings/customer-api/blob/main/img/vscode_extension.png?raw=true)
+## Steps for installation of Service Mesh
+To install service mesh, we will be using OpenShift CLI. Follow steps to login to OpenShift cluster using OpenShift CLI.
+
+### **`Login to cluster using OpenShift CLI`**
+* open command prompt and change directory to location where OpenShift CLI is downloaded.
+* Login to OpenShift cluster by [clicking here](https://oauth-openshift.apps.awsopenshift.ne-innovation.com/oauth/authorize?client_id=console&redirect_uri=https%3A%2F%2Fconsole-openshift-console.apps.awsopenshift.ne-innovation.com%2Fauth%2Fcallback&response_type=code&scope=user%3Afull&state=89ae6812) 
+* Select oktaidp to login and provide User Name and Password used to setup Okta account.
+* Click top right corner on arrow next to your name and click "Copy Login Command".
+        ![Copy Login Command](https://github.com/acc-trainings/customer-api/blob/6.service-mesh/img/CopyLoginCommand.JPG?raw=true)
+* Click on Oktaidp again, this will take you to the page with "Display Token" link on the screen.
+        ![Display Token](https://github.com/acc-trainings/customer-api/blob/6.service-mesh/img/DisplayToken.JPG?raw=true)
+* Click display token and then copy whole command under "Log in with this token"
+        ![LogInToken](https://github.com/acc-trainings/customer-api/blob/6.service-mesh/img/LogInToken.JPG?raw=true)
+* Paste it on OC CLI and hit enter
+
+
+
+
+
+
+
 
