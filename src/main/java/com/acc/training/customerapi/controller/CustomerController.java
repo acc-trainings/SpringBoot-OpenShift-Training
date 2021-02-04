@@ -2,7 +2,6 @@ package com.acc.training.customerapi.controller;
 
 import javax.validation.Valid;
 
-import com.acc.training.customerapi.api.CreateCustomerApi;
 import com.acc.training.customerapi.api.CustomerApi;
 import com.acc.training.customerapi.model.Customer;
 import com.acc.training.customerapi.service.CustomerService;
@@ -14,7 +13,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class CustomerController implements CustomerApi, CreateCustomerApi {
+public class CustomerController implements CustomerApi {
 
     @Autowired
     private CustomerService customerService;
