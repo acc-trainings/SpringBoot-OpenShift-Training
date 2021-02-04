@@ -42,13 +42,12 @@ To install service mesh, we will be using OpenShift CLI. Follow steps to login t
 * Paste it on OC CLI and hit enter
 
 ### **`Install Operators`**
-
 The Service Mesh installation process uses the OperatorHub to install the ServiceMeshControlPlane custom resource definition within the openshift-operators project. The Red Hat OpenShift Service Mesh defines and monitors the ServiceMeshControlPlane related to the deployment, update, and deletion of the control plane.
 
 Starting with Red Hat OpenShift Service Mesh 1.1.11, you must install the Elasticsearch Operator, the Jaeger Operator, and the Kiali Operator before the Red Hat OpenShift Service Mesh Operator can install the control plane.
 
 All the Operators will be installed as part of project creation. Please confim that istio system project:  acctrainings-istio-system-<your first name> has all the operators in ready state.
-
+        
 You should see following screen in OpenShift console where all operators are installed state.
       ![LogInToken](https://github.com/acc-trainings/customer-api/blob/6.service-mesh/img/installedOperators.JPG)
 
