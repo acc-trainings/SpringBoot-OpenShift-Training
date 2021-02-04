@@ -100,14 +100,14 @@ Follow this procedure to add a project to the ServiceMeshMemberRoll from the com
 
 ### **`Creating Istio Ingress Gateway for Istio System Namespace`** 
 
-* Look at the config [here] (https://github.com/acc-trainings/customer-api/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/istio-ingress-gateway.yaml), it has settings to allowing traffic to the gateway, to keep it simple for excercise, we will allow all http traffic
+* Look at the config [here](https://github.com/acc-trainings/customer-api/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/istio-ingress-gateway.yaml), it has settings to allowing traffic to the gateway, to keep it simple for excercise, we will allow all http traffic
 
 * Run the following command to apply gateway:
   ```javascript
         oc apply -n acctrainings-istio-system-<your first name> -f https://raw.githubusercontent.com/acc-trainings/customer-api/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/istio-ingress-gateway.yaml
   ```
 ### **`Creating Istio Ingress Gateway for Application Namespace`** 
-* Look at the config [here] (https://github.com/acc-trainings/customer-api/blob/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/acctrainings-gateway.yaml), to keep it simple for demo, we will allow all http traffic
+* Look at the config [here](https://github.com/acc-trainings/customer-api/blob/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/acctrainings-gateway.yaml), to keep it simple for demo, we will allow all http traffic
 
 * Run the following command to apply gateway:
    ```javascript
