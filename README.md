@@ -44,7 +44,7 @@ All the Operators will be installed as part of project creation. Please confim t
 
 You should see following screen in OpenShift console where all operators are installed state.
         
-        ![LogInToken](https://github.com/acc-trainings/customer-api/blob/6.service-mesh/img/installedOperators.JPG?raw=true)
+        ![LogInToken](https://github.com/acc-trainings/customer-api/blob/6.service-mesh/img/installedOperators.JPG)
 
 ### **`Deploying the Red Hat OpenShift Service Mesh control plane`**  
 
