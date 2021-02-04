@@ -1,0 +1,49 @@
+apiVersion: maistra.io/v2
+kind: ServiceMeshControlPlane
+metadata:
+  name: basic
+spec:
+  addons:
+    grafana:
+      enabled: true
+    jaeger:
+      install:
+        storage:
+          type: Memory
+    kiali:
+      enabled: true
+  gateways:
+    egress:
+      runtime:
+        deployment:
+          autoScaling:
+            enabled: false
+      service: {}
+    ingress:
+      runtime:
+        deployment:
+          autoScaling:
+            enabled: false
+      service: {}
+    openshiftRoute:
+      enabled: false
+  profiles:
+    - default
+  runtime:
+    components:
+      mixer.policy:
+        deployment:
+          autoScaling:
+            enabled: false
+      mixer.telemetry:
+        deployment:
+          autoScaling:
+            enabled: false
+      pilot:
+        deployment:
+          autoScaling:
+            enabled: false
+  tracing:
+    sampling: 10000
+    type: Jaeger
+  version: v1.1
