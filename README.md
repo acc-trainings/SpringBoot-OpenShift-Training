@@ -38,7 +38,7 @@ To install service mesh, we will be using OpenShift CLI. Follow steps to login t
 * Click on Oktaidp again, this will take you to the page with "Display Token" link on the screen.
         ![Display Token](https://github.com/acc-trainings/customer-api/blob/6.service-mesh/img/DisplayToken.JPG?raw=true)
 * Click display token and then copy whole command under "Log in with this token"
-        ![LogInToken](https://github.com/acc-trainings/customer-api/blob/6.service-mesh/img/LogInToken.JPG?raw=true)
+        ![LogInToken](https://github.com/acc-trainings/customer-api/blob/6.service-mesh/img/OperatorsInstalled.JPG?raw=true)
 * Paste it on OC CLI and hit enter
 
 ### **`Install Operators`**
