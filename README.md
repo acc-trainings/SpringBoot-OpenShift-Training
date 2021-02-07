@@ -57,16 +57,15 @@ This is a quick reference guide to understand usages of key components & capabil
 #### **`Required Software`**
 1.	Check hardware and software requirements
     * Need a Workstation with Admin rights(Accenture Machine/Personal Laptop)
-2.  Teams Access
-    * [Teams channel](https://teams.microsoft.com/l/team/19%3a812369d073a741c3a3ccbba976f3697f%40thread.tacv2/conversations?groupId=f9510dd1-3e7e-40c1-bbaf-6fe8dc467c40&tenantId=e0793d39-0939-496d-b129-198edd916feb) will be used for collaboration/communication.
-3.	Check system compatibility with platform software
-4. Install JDK Version **11.0.10_9** from [here](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.10+9/OpenJDK11U-jdk_x64_mac_hotspot_11.0.10_9.pkg)
+2.	Teams Access
+    * [Teams channel](https://teams.microsoft.com/l/team/19%3a812369d073a741c3a3ccbba976f3697f%40thread.tacv2/conversations?groupId=f9510dd1-3e7e-40c1-bbaf-6fe8dc467c40&tenantId=e0793d39-0939-496d-b129-198edd916feb) will be used for collaboration/communication.    
+3.	Check system compatibility with platform software.
+4.	Install JDK Version **11.0.10_9** from [here](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.10+9/OpenJDK11U-dk_x64_mac_hotspot_11.0.10_9.pkg)
 5.	Download Visual Studio Code from following URL
     * **Download:** Click [here](https://code.visualstudio.com/Download) 
     * **Geeting Started:** Click [here](https://code.visualstudio.com/docs/java/java-spring-boot)
-6. GitHub Desktop - [Download](https://desktop.github.com/)
-
-7. Postman - [Download](https://www.postman.com/downloads/)
+6.	GitHub Desktop - [Download](https://desktop.github.com/)    
+7.  Postman - [Download](https://www.postman.com/downloads/)
     
 #### **`Visual Studio Code Required Plugins`**
 Few of the extensions should be pre-installed when you install Visual Studio Code. If you can't see then install from extension tab.
