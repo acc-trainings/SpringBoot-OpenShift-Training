@@ -44,7 +44,7 @@ This is a quick reference guide to understand usages of key components & capabil
 * Basic understanding of data formats such as XML and JSON.
 * Basic understanding of YMAL.
 
-### **`Mandatory Learnings`**
+#### **`Mandatory Learnings`**
 1.	Pluralsight online training access
     * **Enroll:** Click [here](https://mylearning.accenture.com/mylearningui/learner/coursedetail/1648947)
 2. Java training
