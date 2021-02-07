@@ -61,7 +61,8 @@ This is a quick reference guide to understand usages of key components & capabil
 4.	Download Visual Studio Code from following URL
     * **Download:** Click [here](https://code.visualstudio.com/Download) 
     * **Geeting Started:** Click [here](https://code.visualstudio.com/docs/java/java-spring-boot)
-5. GitHub Desktop - [Download](https://desktop.github.com/)    
+5. GitHub Desktop - [Download](https://desktop.github.com/)
+6. Postman - [Download](https://www.postman.com/downloads/)
     
 #### **`Visual Studio Code Required Plugins`**
 Few of the extensions should be pre-installed when you install Visual Studio Code. If you can't see then install from extension tab.
