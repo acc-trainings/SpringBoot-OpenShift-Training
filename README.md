@@ -3,7 +3,7 @@
 # Spring Boot API Development
 
 #### **`Spring Initializr`** - Create Project Structure
-![spring-initializer](https://github.com/acc-trainings/customer-api/blob/main/img/spring-initializer.gif)
+![spring-initializer](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/main/img/spring-initializer.gif)
 
 #### **`POM`**
 Update [POM](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#:~:text=A%20Project%20Object%20Model%20or,default%20values%20for%20most%20projects.) as following
@@ -106,7 +106,7 @@ Update [POM](https://maven.apache.org/guides/introduction/introduction-to-the-po
 ```
 
 #### **`Run the application`**
-![run application](https://github.com/acc-trainings/customer-api/blob/main/img/run-spring.gif)
+![run application](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/main/img/run-spring.gif)
 
 
 
