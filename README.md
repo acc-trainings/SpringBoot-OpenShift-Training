@@ -19,8 +19,8 @@ This is a quick reference guide with step by step instructions on how you can se
 
 ### **`Application Deployment`**
 
-* Namespace for istio system is already create  with name - acctrainings-istio-system-<your first name>
-* Namespace for applications is already create  with name - acctrainings-<your first name>
+* Namespace for istio system is already create  with name - ```acctrainings-istio-system-<your first name>```
+* Namespace for applications is already create  with name - ```acctrainings-<your first name>```
 * Customer service is deployed using Deployments configuration in application namespace
 * Version 1 of Policy Service is deployed using Deployments configuration in application namespace
 
@@ -46,7 +46,7 @@ The Service Mesh installation process uses the OperatorHub to install the Servic
 
 Starting with Red Hat OpenShift Service Mesh 1.1.11, you must install the Elasticsearch Operator, the Jaeger Operator, and the Kiali Operator before the Red Hat OpenShift Service Mesh Operator can install the control plane.
 
-All the Operators will be installed as part of project creation. Please confim that istio system project:  acctrainings-istio-system-<your first name> has all the operators in ready state.
+All the Operators will be installed as part of project creation. Please confim that istio system project:  ```acctrainings-istio-system-<your first name>``` has all the operators in ready state.
         
 You should see following screen in OpenShift console where all operators are installed state.
       ![InstalledOperators](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/6.service-mesh/img/OperatorsInstalled.JPG)
@@ -110,7 +110,7 @@ To install servicemesh control plane, follow below procedures:
 Follow this procedure to add a project to the ServiceMeshMemberRoll from the command line.
 
 * Create a ServiceMeshMemberRoll resource in the same project as the ServiceMeshControlPlane resource, in our example that is ```acctrainings-istio-system-<your first name> ```.
- [Click here](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/istio-servicemeshmemberroll-default.yaml) for location. You have to customize the value of members by replacing existing value with you application namespace i.e. acctrainings-<your first name>. The resource must be named default.
+ [Click here](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/istio-servicemeshmemberroll-default.yaml) for location. You have to customize the value of members by replacing existing value with you application namespace i.e. ```acctrainings-<your first name>```. The resource must be named default.
 
 * Run the following command to apply member roll:
 
