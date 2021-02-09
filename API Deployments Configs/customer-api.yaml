@@ -1,0 +1,47 @@
+# Service and Deployment configuration for Customer service deployment.
+
+##################################################################################################
+# Customer service
+##################################################################################################
+apiVersion: v1
+kind: Service
+metadata:
+  name: customer-api
+  labels:
+    app: customer-api
+    service: customer-api
+spec:
+  ports:
+  - port: 8080
+    name: http
+  selector:
+    app: customer-api
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer-api
+  labels:
+    app: customer-api
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: customer-api
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: customer-api
+        version: v1
+    spec:
+      containers:
+      - name: customer-api
+        image: quay.io/necloudnativetraining/customer-api:customer-api-vikas
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+      env:
+        - name: spring.profiles.active
+          value: local

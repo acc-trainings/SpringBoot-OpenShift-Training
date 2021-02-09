@@ -1,0 +1,48 @@
+# Service and Deployment configuration for Policy service deployment.
+##################################################################################################
+# Policy api
+##################################################################################################
+apiVersion: v1
+kind: Service
+metadata:
+  name: policy-api
+  labels:
+    app: policy-api
+    service: policy-api
+spec:
+  ports:
+  - port: 8080
+    name: http
+  selector:
+    app: policy-api
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: policy-api-release-1.0.0
+  labels:
+    app: policy-api
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: policy-api
+      version: v1
+  template:
+    metadata:
+      annotations:
+        sidecar.istio.io/inject: "true"
+      labels:
+        app: policy-api
+        version: v1
+    spec:
+      containers:
+      - name: policy-api
+        image: quay.io/necloudnativetraining/policy-api:release-1.0.0
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+      env:
+        - name: spring.profiles.active
+          value: local
