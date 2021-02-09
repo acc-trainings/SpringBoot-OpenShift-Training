@@ -4,7 +4,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import nonapi.io.github.classgraph.json.Id;
 
-@Document(collection = "customer-at-rahul")
+@Document(collection = "customers-training")
 public class CustomerDomain {
 
     @Id
