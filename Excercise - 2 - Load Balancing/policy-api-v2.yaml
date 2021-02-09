@@ -11,7 +11,7 @@ metadata:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: policy-api-release-1.0.0-v2
+  name: policy-api-release-2.0.0
   labels:
     app: policy-api
     version: v2
@@ -32,7 +32,7 @@ spec:
       serviceAccountName: policy-api
       containers:
       - name: policy-api
-        image: quay.io/necloudnativetraining/policy-api:release-1.0.0-v2
+        image: quay.io/necloudnativetraining/policy-api:release-2.0.0
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080

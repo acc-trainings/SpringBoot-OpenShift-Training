@@ -31,8 +31,6 @@ spec:
       version: v1
   template:
     metadata:
-      annotations:
-        sidecar.istio.io/inject: "true"
       labels:
         app: policy-api
         version: v1

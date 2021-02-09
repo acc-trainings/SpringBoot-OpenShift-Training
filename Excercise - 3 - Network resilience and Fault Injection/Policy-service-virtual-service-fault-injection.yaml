@@ -18,6 +18,6 @@ spec:
             prefix: /policy
       route:
         - destination:
-            host: policy-service
+            host: policy-api
             port:
               number: 8080
