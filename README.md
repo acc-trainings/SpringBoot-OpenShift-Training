@@ -78,7 +78,7 @@ To install servicemesh control plane, follow below procedures:
 
    ```javascript
        NAME           READY
-       basic-install   True
+       basic          True
    ```
 
 * Run the following command to watch the progress of the Pods during the installation process:
