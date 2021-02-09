@@ -109,7 +109,7 @@ To install servicemesh control plane, follow below procedures:
 
 Follow this procedure to add a project to the ServiceMeshMemberRoll from the command line.
 
-* Create a ServiceMeshMemberRoll resource in the same project as the ServiceMeshControlPlane resource, in our example that is ```sh acctrainings-istio-system-<your first name> ```.
+* Create a ServiceMeshMemberRoll resource in the same project as the ServiceMeshControlPlane resource, in our example that is ```acctrainings-istio-system-<your first name> ```.
  [Click here](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/istio-servicemeshmemberroll-default.yaml) for location. You have to customize the value of members by replacing existing value with you application namespace i.e. acctrainings-<your first name>. The resource must be named default.
 
 * Run the following command to apply member roll:
