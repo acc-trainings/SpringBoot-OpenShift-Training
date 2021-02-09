@@ -18,16 +18,35 @@ public class CustomerService {
     private CustomerRepository customerRepository;
 
     public Customer getCustomer(String custId) {
+        Optional<CustomerDomain> domainCustomer = customerRepository.findByCustomerId(custId);
 
-        Optional<CustomerDomain> customer = customerRepository.findByCustomerId(custId);
-        if (!customer.isPresent()) {
+        if (!domainCustomer.isPresent()) {
             return null;
         }
-        return customer.get();
+
+        Customer modelCustomer = mapDomainToModel(domainCustomer.get());
+        return modelCustomer;
     }
 
     public Customer createCustomer(@Valid Customer body) {
-        return body;
+        CustomerDomain domainCustomer = mapModelToDomain(body);
+        return mapDomainToModel(customerRepository.save(domainCustomer));
+    }
+
+    private CustomerDomain mapModelToDomain(Customer customer) {
+        CustomerDomain domainCustomer = new CustomerDomain();
+        domainCustomer.setCustomerAddress(customer.getCustomerAddress());
+        domainCustomer.setCustomerId(customer.getCustomerId());
+        domainCustomer.setCustomerName(customer.getCustomerName());
+        return domainCustomer;
+    }
+
+    private Customer mapDomainToModel(CustomerDomain domainCustomer) {
+        Customer modelCustomer = new Customer();
+        modelCustomer.setCustomerAddress(domainCustomer.getCustomerAddress());
+        modelCustomer.setCustomerId(domainCustomer.getCustomerId());
+        modelCustomer.setCustomerName(domainCustomer.getCustomerName());
+        return modelCustomer;
     }
 
 }
