@@ -55,3 +55,13 @@ spec:
         ports:
         - containerPort: 8080
 ---
+apiVersion: v1
+kind: Route
+metadata:
+  name: customer-api
+  labels:
+    app: customer-api
+spec:
+  to:
+    kind: Service
+    name: customer-api
