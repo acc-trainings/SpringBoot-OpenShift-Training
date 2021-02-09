@@ -80,5 +80,5 @@ Few of the extensions should be pre-installed when you install Visual Studio Cod
 * Click on Extension tab from right panel on Visual Studio Code IDE.
 * Search above mentioned extensions and click on install.
 
-![Visual Studio Code Extension](https://github.com/acc-trainings/customer-api/blob/main/img/vscode_extension.png?raw=true)
+![Visual Studio Code Extension](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/main/img/vscode_extension.png?raw=true)
 
