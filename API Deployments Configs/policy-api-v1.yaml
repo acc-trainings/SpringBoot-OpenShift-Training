@@ -7,6 +7,7 @@ kind: ConfigMap
 metadata:
   name: policy-api
 data:
+  server.port: '8080'
   spring.application.name: policy-api
   external.services.customer.uri: http://customer-api:8080
   spring.data.mongodb.uri: mongodb+srv://demo123:demo123@acctrainings.dntd4.mongodb.net/db-acc-trainings?retryWrites=true&w=majority
