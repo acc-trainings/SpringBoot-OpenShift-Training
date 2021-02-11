@@ -7,10 +7,14 @@ kind: ConfigMap
 metadata:
   name: policy-api
 data:
-  #spring.profiles.active: local
+  spring.application.name: policy-api
   external.services.customer.uri: http://customer-api:8080
-  spring.data.mongodb.uri: mongodb+srv://training_rw_user:training_rw_password@training-cluster-dev.z7ar8.mongodb.net/customer-db
-  #datastore.mongodb.collection.name: customer-coll-local
+  spring.data.mongodb.uri: mongodb+srv://demo123:demo123@acctrainings.dntd4.mongodb.net/db-acc-trainings?retryWrites=true&w=majority
+  spring.data.mongodb.database: db-acc-trainings
+
+#Swagger
+  springdoc.swagger-ui.path: /policy-api/swagger-ui.html
+  springdoc.swagger-ui.operationsSorter: method
 ---
 apiVersion: v1
 kind: Service
