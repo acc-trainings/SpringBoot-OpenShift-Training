@@ -66,3 +66,22 @@ spec:
   to:
     kind: Service
     name: customer-api
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: customer-api-virtual-service
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - acctrainings-vikas-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /customer
+    route:
+    - destination:
+        host: customer-api
+        port:
+          number: 8080
