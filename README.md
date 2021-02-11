@@ -56,13 +56,13 @@ You should see following screen in OpenShift console where all operators are ins
 
 To install servicemesh control plane, follow below procedures:
 
-* If project is not created, you can create by running following command
+* If project is not created, you can create by running following command which will install all required operators as well.
 
    ```javascript
        oc new-project acctrainings-istio-system-<your first name>
    ```
 
-* Create a ServiceMeshControlPlane file named istio-servicemeshmemberroll-default.yaml. [Click here](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/tree/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh) for location. You can customize the values as needed to match your use case.
+* Create a ServiceMeshControlPlane file named istio-servicemeshmemberroll-default.yaml. [Click here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/istio-ServiceMeshControlPlane-installation.yaml) for location. You can customize the values as needed to match your use case.
 * Run the following command to deploy the control plane:
 
    ```javascript
@@ -111,6 +111,7 @@ To install servicemesh control plane, follow below procedures:
 Follow this procedure to add a project to the ServiceMeshMemberRoll from the command line.
 
 * Create a ServiceMeshMemberRoll resource in the same project as the ServiceMeshControlPlane resource, in our example that is ```acctrainings-istio-system-<your first name> ```.
+
  [Click here](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/istio-servicemeshmemberroll-default.yaml) for location. You have to customize the value of members by replacing existing value with you application namespace i.e. ```acctrainings-<your first name>```. The resource must be named default.
 
 * Run the following command to apply member roll:
@@ -137,6 +138,12 @@ Follow this procedure to add a project to the ServiceMeshMemberRoll from the com
 
    ```javascript
         oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/acctrainings-gateway.yaml
+   ```
+
+* Note: if ```acctrainings-<your first name>``` is not yet available, use following command to create it.
+
+   ```javascript
+        oc new-project acctrainings-<your first name>
    ```
 
 ### **`Deploy Applications`**

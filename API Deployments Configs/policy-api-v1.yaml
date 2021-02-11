@@ -47,7 +47,7 @@ spec:
     spec:
       containers:
       - name: policy-api
-        image: quay.io/necloudnativetraining/policy-api-gold:release-1.0.0
+        image: quay.io/acctrainings/policy-api-gold:release-1.0.0
         imagePullPolicy: IfNotPresent
         envFrom:
           - configMapRef:
