@@ -42,12 +42,13 @@ To install service mesh, we will be using OpenShift CLI. Follow steps to login t
 * Paste it on OC CLI and hit enter
 
 ### **`Install Operators`**
+
 The Service Mesh installation process uses the OperatorHub to install the ServiceMeshControlPlane custom resource definition within the openshift-operators project. The Red Hat OpenShift Service Mesh defines and monitors the ServiceMeshControlPlane related to the deployment, update, and deletion of the control plane.
 
 Starting with Red Hat OpenShift Service Mesh 1.1.11, you must install the Elasticsearch Operator, the Jaeger Operator, and the Kiali Operator before the Red Hat OpenShift Service Mesh Operator can install the control plane.
 
 All the Operators will be installed as part of project creation. Please confim that istio system project:  ```acctrainings-istio-system-<your first name>``` has all the operators in ready state.
-        
+
 You should see following screen in OpenShift console where all operators are installed state.
       ![InstalledOperators](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/6.service-mesh/img/OperatorsInstalled.JPG)
 
@@ -138,14 +139,52 @@ Follow this procedure to add a project to the ServiceMeshMemberRoll from the com
         oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/acctrainings-gateway.yaml
    ```
 
-### **`Creating Virtual Service`**
+### **`Deploy Customer API`**
 
-* Look at the config [here](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/Policy-service-virtual-service.yaml), it has settings routing traffic to application
+In order to move forward with service mesh, we will need Customer-api and policy-api to be deployed on your project. If these are not yet deployed, follow steps to deploy -
+
+#### **`Customer API Deployment`**
+
+* Look at the config [here](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/6.service-mesh/API%20Deployments%20Configs/customer-api.yaml), it has configurations for -
+  * ConfigMap - The ConfigMap object provides mechanisms to inject containers with configuration data while keeping containers agnostic of OpenShift Container   Platform. A ConfigMap can be used to store fine-grained information like individual properties or coarse-grained information like entire configuration files or JSON blobs.
+  * Service - An abstract way to expose an application running on a set of Pods as a network service.
+  * Deployment -  Deployments describe the desired state of a particular component of an application as a Pod template.
+  * Route - Configuration to create route to be exposed for your service deployed on POD.
+
+* Run the following command to deploy customer api:
+
+    ```javascript
+        oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/API%20Deployments%20Configs/customer-api.yaml
+    ```
+
+#### **`Policy API Deployment`**
+
+* Look at the config [here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/API%20Deployments%20Configs/policy-api-v1.yaml)
+
+* Run the following command to deploy customer api:
+
+    ```javascript
+        oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/API%20Deployments%20Configs/policy-api-v1.yaml
+    ```
+
+### **`Creating Virtual Service for Customer API`**
+
+* Look at the config [here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/customer-api-virtual-service.yaml), it has settings routing traffic to application
 
 * Run the following command to apply Virtual Service:
 
     ```javascript
-        oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/Policy-service-virtual-service.yaml
+        oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/customer-api-virtual-service.yaml
+    ```
+
+### **`Creating Virtual Service for Policy API`**
+
+* Look at the config [here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/policy-api-virtual-service.yaml), it has settings routing traffic to application
+
+* Run the following command to apply Virtual Service:
+
+    ```javascript
+        oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/policy-api-virtual-service.yaml
     ```
 
 ### **`Inject Side Car`**
