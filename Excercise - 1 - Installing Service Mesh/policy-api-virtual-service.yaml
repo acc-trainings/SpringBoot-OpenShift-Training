@@ -3,16 +3,18 @@ kind: VirtualService
 metadata:
   name: policy-api-virtual-service
 spec:
-  hosts:
-  - "*"
   gateways:
-  - acctrainings-vikas-gateway
+    - acctrainings-vikas-gateway
+  hosts:
+    - '*'
   http:
-  - match:
-    - uri:
-        prefix: /policy
-    route:
-    - destination:
-        host: policy-api
-        port:
-          number: 8080
+    - match:
+        - uri:
+            prefix: /policy
+        - uri:
+            prefix: /policies
+      route:
+        - destination:
+            host: policy-api
+            port:
+              number: 8080
