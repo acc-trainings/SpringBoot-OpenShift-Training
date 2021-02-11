@@ -139,7 +139,7 @@ Follow this procedure to add a project to the ServiceMeshMemberRoll from the com
         oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/acctrainings-gateway.yaml
    ```
 
-### **`Deploy Customer API`**
+### **`Deploy Applications`**
 
 In order to move forward with service mesh, we will need Customer-api and policy-api to be deployed on your project. If these are not yet deployed, follow steps to deploy -
 
@@ -167,7 +167,9 @@ In order to move forward with service mesh, we will need Customer-api and policy
         oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/API%20Deployments%20Configs/policy-api-v1.yaml
     ```
 
-### **`Creating Virtual Service for Customer API`**
+### **`Create Virtual Service`** 
+
+#### **`Virtual Service for Customer API`**
 
 * Look at the config [here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/customer-api-virtual-service.yaml), it has settings routing traffic to application
 
@@ -177,7 +179,7 @@ In order to move forward with service mesh, we will need Customer-api and policy
         oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/customer-api-virtual-service.yaml
     ```
 
-### **`Creating Virtual Service for Policy API`**
+#### **`Virtual Service for Policy API`**
 
 * Look at the config [here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/policy-api-virtual-service.yaml), it has settings routing traffic to application
 
