@@ -20,7 +20,7 @@ Let’s start our Journey:
 * Click on the “Project” tab from left hand side under Home.
 * Click on the “Create Project “on upper right-hand side on screen
 
-Pic 1
+[pic1](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/1.OpenShift/pic1.png)
 
 * Provide the standard naming convention for the project name which is pre-requisite for demo session.  In this case, it would be “acctrainings-initialname”.  For this demo purpose, it would be “acctrainings-ketan”
 
