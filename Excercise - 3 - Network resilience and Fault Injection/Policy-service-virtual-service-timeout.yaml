@@ -17,3 +17,7 @@ spec:
         port:
           number: 8080
     timeout: 5s
+    retries:
+      attempts: 3
+      perTryTimeout: 2s
+     

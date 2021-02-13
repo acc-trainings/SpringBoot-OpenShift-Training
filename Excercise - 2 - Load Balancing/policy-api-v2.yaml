@@ -36,6 +36,6 @@ spec:
         imagePullPolicy: IfNotPresent
         envFrom:
           - configMapRef:
-              name: customer-api
+              name: policy-api
         ports:
         - containerPort: 8080

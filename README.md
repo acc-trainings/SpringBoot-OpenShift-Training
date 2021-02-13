@@ -24,7 +24,7 @@ This is a quick reference guide with step by step instructions on how you can se
 * Customer service is deployed using Deployments configuration in application namespace
 * Version 1 of Policy Service is deployed using Deployments configuration in application namespace
 
-## Steps for installation of Service Mesh
+## Installing Service Mesh
 
 To install service mesh, we will be using OpenShift CLI. Follow steps to login to OpenShift cluster using OpenShift CLI.
 
@@ -209,3 +209,70 @@ In order to move forward with service mesh, we will need Customer-api and policy
 
 * Check POD of the service - it will have 2 container in same pod
 * Test with istio gateway path
+
+## Traffic management
+
+Istio’s traffic routing rules let you easily control the flow of traffic and API calls between services. Istio simplifies configuration of service-level properties like circuit breakers, timeouts, and retries, and makes it easy to set up important tasks like A/B testing, canary rollouts, and staged rollouts with percentage-based traffic splits. It also provides out-of-box failure recovery features that help make your application more robust against failures of dependent services or the network.
+
+For this session, we will focus on Load balancing, Network resilience and testing.
+
+### Load Balancing
+
+### **`Deploy version 2 of Policy-api`**
+
+* To observe load balancing, we will deploy policy-api-v2.
+* Look at the config [here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%202%20-%20Load%20Balancing/policy-api-v2.yaml)
+
+* Run the following command to deploy policy-api-v2:
+
+    ```javascript
+        oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%202%20-%20Load%20Balancing/policy-api-v2.yaml
+    ```
+
+* Start refresing browser to see V1 and V2 of the policy service bringing data alternativly, this is default Round Robin behaviour for load balancing.
+
+### **`Apply Destination Rule`**
+
+* Enable Destination Rule to Observe Random and Least Requests load balancing behaviour.
+* Look at the config [here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%202%20-%20Load%20Balancing/policy-service-destination-rule.yaml)
+
+* Run the following command to deploy policy-api-v2:
+
+    ```javascript
+        oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%202%20-%20Load%20Balancing/policy-service-destination-rule.yaml
+    ```
+
+* Start refresing browser to see V1 and V2 of the policy service bringing data randomly.
+
+### Network resilience and testing
+
+### **`Setting Timeouts and retries`**
+
+* Set timeout and retries setting in Policy-api-virtual-service.
+* Add following lines at the end in Virtual service
+
+    ```javascript
+        timeout: 5s
+        retries:
+          attempts: 3
+          perTryTimeout: 2s
+    ```
+
+* Alternativey delete ```policy-api-virtual-service``` and run following command to add new virtual service with timeout and retry configuration
+
+    ```javascript
+        oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%203%20-%20Network%20resilience%20and%20Fault%20Injection/Policy-service-virtual-service-timeout.yaml
+    ```
+
+### **`Fault Injection and testing`**
+
+* Inject delays using Virtual service configuration
+* Delete ```policy-api-virtual-service```
+* Look at fault section in the config [here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%203%20-%20Network%20resilience%20and%20Fault%20Injection/Policy-service-virtual-service-fault-injection.yaml).
+* Run the following command to apply fault injection configuration:
+
+    ```javascript
+        oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%203%20-%20Network%20resilience%20and%20Fault%20Injection/Policy-service-virtual-service-fault-injection.yaml
+    ```
+
+* Start refresing browser to see 7s delay in response.
