@@ -1,0 +1,79 @@
+# Service and Deployment configuration for Customer service deployment.
+
+##################################################################################################
+# Customer service
+##################################################################################################
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: customer-api
+data:
+  #spring.profiles.active: local
+  spring.data.mongodb.uri: mongodb+srv://demo123:demo123@acctrainings.dntd4.mongodb.net/db-acc-trainings?retryWrites=true&w=majority
+  spring.data.mongodb.database: db-acc-trainings
+  #datastore.mongodb.collection.name: customer-coll-local
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: acctrainings-initial
+  namespace: "acctrainings-initial"
+  labels:
+    app: acctrainings-initial
+    service: acctrainings-initial
+spec:
+  ports:
+  - port: 8080
+    name: http
+  selector:
+    app: acctrainings-initial-node
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: acctrainings-initial
+  labels:
+    app: acctrainings-initial
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: acctrainings-initial-node
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: acctrainings-initial-node
+        version: v1
+    spec:
+      containers:
+      - name: acctrainings-initial-node
+        image: quay.io/acctrainings/customer-api:%%IMG_TAG%%
+        imagePullPolicy: IfNotPresent
+        envFrom:
+          - configMapRef:
+              name: customer-api
+        ports:
+        - containerPort: 8080
+        env:
+        resources: {}
+      imagePullSecrets:
+        - name: quay-cred 
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: acctrainings-initial
+  namespace: "acctrainings-initial"
+  labels:
+    app: acctrainings-initial
+spec:
+  to:
+    kind: Service
+    name: acctrainings-initial
+status:
+  ingress:
+  - conditions:
+    - status: "True"
+      type: Admitted
