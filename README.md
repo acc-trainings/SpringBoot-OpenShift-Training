@@ -112,9 +112,22 @@ Follow this procedure to add a project to the ServiceMeshMemberRoll from the com
 
 * Create a ServiceMeshMemberRoll resource in the same project as the ServiceMeshControlPlane resource, in our example that is ```acctrainings-istio-system-<your first name> ```.
 
- [Click here](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/istio-servicemeshmemberroll-default.yaml) for location. You have to customize the value of members by replacing existing value with you application namespace i.e. ```acctrainings-<your first name>```. The resource must be named default.
+ [Click here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/istio-servicemeshmemberroll-default.yaml) for location. You have to customize the value of members by replacing existing value with you application namespace i.e. ```acctrainings-<your first name>```. The resource must be named default.
 
-* Run the following command to apply member roll:
+* Create Service memberRoll by adding from web Console
+* Click on Installed Operators for your Project and then click Service Mesh Operator
+        ![Copy Login Command](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/6.service-mesh/img/MemberRoll.JPG?raw=true)
+  
+* Click "Istio Service Mesh Member Roll"
+        ![Copy Login Command](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/6.service-mesh/img/SelectMR.JPG?raw=true)
+
+* Click button "Create ServiceMeshMemberRoll" to add configuration
+        ![Copy Login Command](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/6.service-mesh/img/ButtonMR.JPG?raw=true)
+
+* Select "YAML View" and add name of your project under member section
+        ![Copy Login Command](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/6.service-mesh/img/MemberName.JPG?raw=true)
+
+* Alternatively, copy YAML file form [here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/istio-servicemeshmemberroll-default.yaml), add member name and run the following command to apply member roll:
 
    ```javascript
         oc create -n acctrainings-istio-system-<your first name> -f <Path of your yaml file>
@@ -132,7 +145,7 @@ Follow this procedure to add a project to the ServiceMeshMemberRoll from the com
 
 ### **`Creating Istio Ingress Gateway for Application Namespace`** 
 
-* Look at the config [here](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/acctrainings-gateway.yaml), to keep it simple for demo, we will allow all http traffic
+* Look at the config [here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/acctrainings-gateway.yaml), to keep it simple for demo, we will allow all http traffic
 
 * Run the following command to apply gateway:
 
@@ -152,7 +165,7 @@ In order to move forward with service mesh, we will need Customer-api and policy
 
 #### **`Customer API Deployment`**
 
-* Look at the config [here](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/6.service-mesh/API%20Deployments%20Configs/customer-api.yaml), it has configurations for -
+* Look at the config [here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/API%20Deployments%20Configs/customer-api.yaml), it has configurations for -
   * ConfigMap - The ConfigMap object provides mechanisms to inject containers with configuration data while keeping containers agnostic of OpenShift Container   Platform. A ConfigMap can be used to store fine-grained information like individual properties or coarse-grained information like entire configuration files or JSON blobs.
   * Service - An abstract way to expose an application running on a set of Pods as a network service.
   * Deployment -  Deployments describe the desired state of a particular component of an application as a Pod template.
