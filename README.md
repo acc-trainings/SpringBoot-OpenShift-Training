@@ -10,11 +10,11 @@ The follow document will be divided into 3 main categories.
 
 Let’s start our Journey:
 
-# Pre-requisite setup
+# A. Pre-requisite setup
 
-## OpenShift Project Setup
+## 1. OpenShift Project Setup
 
-### If Project is not setup in OpenShift already, follow the below steps to create a project.
+### 1.1 If Project is not setup in OpenShift already, follow the below steps to create a project.
 
 * Go to https://console-openshift-console.apps.awsopenshift.ne-innovation.com
 * Click on the “Project” tab from left hand side under Home.
@@ -33,7 +33,7 @@ Let’s start our Journey:
 
 ![pic3](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/1.OpenShift/pic3.png)
 
-### Setup Quay credentials 
+### 1.2 Setup Quay credentials 
 
 Since we already know that Image are getting created and pushed into Quay.io, OpenShift also require to connect with Quay to pull the image for the deployment purpose. For this, we are going to setup the credentials in OpenShift. 
 
@@ -64,9 +64,9 @@ Since we already know that Image are getting created and pushed into Quay.io, Op
 * The credentials setup is completed successfully.
 
 
-## Branch creation in GitHub Repo
+## 2. Branch creation in GitHub Repo
 
-### Create branch from Source Code Repo
+### 2.1 Create branch from Source Code Repo
 
 * Go to the Source Code Repo
 * Click on the “main” and Provide the branch name. As per demo naming standards it should be “acctrainings-initialname”. For this demo purpose, it would be “acctrainings-ketan”
@@ -78,7 +78,7 @@ Since we already know that Image are getting created and pushed into Quay.io, Op
 
 ![pic2](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/2.Branch_Creation/pic2.png)
 
-### Create branch from ConfigRepo
+### 2.2 Create branch from ConfigRepo
 
 ConfigRepo is a GitHub repository name in which the appdeploy.yaml file resides. ArgoCD listen the latest changes in this file and initial the deployment into OpenShift project
 
@@ -96,7 +96,7 @@ ConfigRepo is a GitHub repository name in which the appdeploy.yaml file resides.
 
 
 
-## ArgoCD Project Setup
+## 3. ArgoCD Project Setup
 
 * Go to https://argocd-server-argocd.apps.awsopenshift.ne-innovation.com/applications
 * Click on “+ New App”
@@ -124,7 +124,7 @@ ConfigRepo is a GitHub repository name in which the appdeploy.yaml file resides.
 
 * The Project setup in ArgoCD is completed.
 
-## Jenkinsfile changes in your branch
+## 4. Jenkinsfile changes in your branch
 
 * Go to your source code GitHub Repo branch
 * Click on the “Jenkinsfile” and click on “edit”
@@ -138,7 +138,7 @@ ConfigRepo is a GitHub repository name in which the appdeploy.yaml file resides.
 
 e.	Commit the changes.
 
-## Appdeploy.yaml file changes in your branch
+## 5. Appdeploy.yaml file changes in your branch
 
 * Go to your source code GitHub Repo branch
 * Navigate to the “Deployment Folder”
@@ -159,7 +159,7 @@ e.	Commit the changes.
 e.	Once changes is applied, commit the changes.
 
 
-# Jenkins console Build and Deploy
+# B. Jenkins console Build and Deploy
 
 * Go to https://jenkins-jenkins-ne-demo.apps.awsopenshift.ne-innovation.com/job/customer-api
 * Click “Scan Multibranch Pipeline Now”. This will scan any new branch created in GitHub Source code repo.
@@ -188,9 +188,9 @@ e.	Once changes is applied, commit the changes.
 
 
 
-# Verification of deployment
+# C. Verification of deployment
 
-## Image Creation in Quay
+## 1. Image Creation in Quay
 
 * Go to https://quay.io/repository/acctrainings/customer-api?tab=tags
 * Verify that the image is created successfully. Image name should be suffixed with the your name 
@@ -198,7 +198,7 @@ e.	Once changes is applied, commit the changes.
 ![pic1](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/7.Verify_Deployment/pic1.png)
 
 
-## ConfigRepo file changes
+## 2. ConfigRepo file changes
 
 * Go to https://github.com/acc-trainings/customer-api-configrepo
 * Go to your Branch name
@@ -207,7 +207,7 @@ e.	Once changes is applied, commit the changes.
 ![pic6](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/7.Verify_Deployment/pic6.png)
 
 
-## ArgoCD Sync
+## 3. ArgoCD Sync
 
 * Go to https://argocd-server-argocd.apps.awsopenshift.ne-innovation.com/applications
 * Click on the project with your name.
@@ -222,7 +222,7 @@ e.	Once changes is applied, commit the changes.
 
 
 
-## OpenShift Deployment 
+## 4. OpenShift Deployment 
 
 * Go to https://console-openshift-console.apps.awsopenshift.ne-innovation.com
 * Click on the “Project” tab from left hand side under Home.
