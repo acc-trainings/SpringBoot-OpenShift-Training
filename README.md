@@ -122,7 +122,7 @@ Follow this procedure to add a project to the ServiceMeshMemberRoll from the com
 
 ### **`Creating Istio Ingress Gateway for Istio System Namespace`** 
 
-* Look at the config [here](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/istio-ingress-gateway.yaml), it has settings to allowing traffic to the gateway, to keep it simple for excercise, we will allow all http traffic
+* Look at the config [here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/istio-ingress-gateway.yaml), it has settings to allowing traffic to the gateway, to keep it simple for excercise, we will allow all http traffic
 
 * Run the following command to apply gateway:
 
