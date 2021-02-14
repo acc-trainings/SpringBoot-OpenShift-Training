@@ -187,7 +187,21 @@ In order to move forward with service mesh, we will need Customer-api and policy
         oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/API%20Deployments%20Configs/policy-api-v1.yaml
     ```
 
-### **`Create Virtual Service`** 
+### **`Inject Side Car`**
+
+* Open the application’s configuration YAML file in an editor.
+* Add sidecar to the deployments configuration YAML with a value of "true" under metadata.annotations
+
+    ```javascript
+        metadata:
+          annotations:
+            sidecar.istio.io/inject: 'true'
+    ```
+
+* Check POD of the service - it will have 2 container in same pod
+* Test with istio gateway path
+
+### **`Create Virtual Service`**
 
 #### **`Virtual Service for Customer API`**
 
@@ -208,20 +222,6 @@ In order to move forward with service mesh, we will need Customer-api and policy
     ```javascript
         oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/policy-api-virtual-service.yaml
     ```
-
-### **`Inject Side Car`**
-
-* Open the application’s configuration YAML file in an editor.
-* Add sidecar to the deployments configuration YAML with a value of "true" under metadata.annotations
-
-    ```javascript
-        metadata:
-          annotations:
-            sidecar.istio.io/inject: 'true'
-    ```
-
-* Check POD of the service - it will have 2 container in same pod
-* Test with istio gateway path
 
 ## Traffic management
 
