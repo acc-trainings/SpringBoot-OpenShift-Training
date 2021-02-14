@@ -24,8 +24,6 @@ This is a quick reference guide to understand usages of key components & capabil
 * Build code
 * Package & Deploy
 
-**`TODO`** - Upload Use Case diagram (restController, Service layer, repository layer)
-
 ## Tools & Technologies
 * Spring Boot, Spring Cloud
 * Mongo database
