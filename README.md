@@ -68,11 +68,13 @@ This is a quick reference guide to understand usages of key components & capabil
 #### **`Visual Studio Code Required Plugins`**
 Few of the extensions should be pre-installed when you install Visual Studio Code. If you can't see then install from extension tab.
 * [Spring Boot Extension Pack](https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack)
-* [Project Manager for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-dependency)
+* [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
 * [Maven for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-maven)
-* [OpenAPI (Swagger) Editor](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi)
 * [OpenAPI Preview](https://marketplace.visualstudio.com/items?itemName=zoellner.openapi-preview)
+* [Swagger Viwer](https://marketplace.visualstudio.com/items?itemName=Arjun.swagger-viewer)
 * [openapi-lint](https://marketplace.visualstudio.com/items?itemName=mermade.openapi-lint)
+* [Java Code Generator](https://marketplace.visualstudio.com/items?itemName=sohibe.java-generate-setters-getters)
+* [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
 
 #### **`Steps for installation`**
 * Click on Extension tab from right panel on Visual Studio Code IDE.
