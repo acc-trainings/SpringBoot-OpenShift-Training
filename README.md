@@ -1,5 +1,3 @@
-# Customer API
-
 # MongoDB
 
 ## Prerequisties
@@ -16,4 +14,6 @@
     * **Geeting Started:** Click [here](https://docs.mongodb.com/compass/master/)
 
 
-
+# Customer API
+1.	Continue to code further on your branch in Customer API code.   
+1.	Follow instructions provided in the session. 
