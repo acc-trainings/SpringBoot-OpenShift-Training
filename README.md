@@ -1,7 +1,7 @@
-# Customer API
+# SpringBoot-OpenShift-Training
 
 ## Objective
-This is a quick reference guide to understand usages of key components & capabilities in this training that trainee may require during api design and build phase. It also contains details and references to help you to getting started with initial set-up for development environemt, IDE for coding and other tool technologies which enable you to design, develop and deploy the customer-api. We will follow following Software/API Development LifeCycle during this training.
+This is a quick reference guide to understand usages of key components & capabilities in this training that trainee may require during api design and build phase. It also contains details and references to help you to getting started with initial set-up for development environemt, IDE for coding and other tool technologies which enable you to design, develop and deploy the customer-api & policy-api. We will follow following Software/API Development LifeCycle during this training.
 
 ![Software Development Lifecycle](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/main/img/sdlc.png?raw=true)
 
@@ -16,7 +16,7 @@ This is a quick reference guide to understand usages of key components & capabil
 * Day 7. Reactive Programming using Spring WebFlux
 
 ## Use Case
-* Design customer service using swagger open API
+* Design customer api using swagger open API
    * Create customer
    * Get customer
 * Establish contract between API specification and business need
