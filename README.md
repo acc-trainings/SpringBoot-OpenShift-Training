@@ -16,6 +16,7 @@ This is a quick reference guide to understand usages of key components & capabil
 * Day 7. Reactive Programming using Spring WebFlux
 
 ## Use Case
+**`customer-api`**
 * Design customer api using swagger open API
    * Create customer
    * Get customer
@@ -23,6 +24,12 @@ This is a quick reference guide to understand usages of key components & capabil
 * Generate code from API
 * Build code
 * Package & Deploy
+
+**`policy-api`**
+* Donwload Policy API Github Repository
+* Run the code and see the response for getPolicy.
+* Now add the local Customer API call in the Policy API code (webService/API call).
+* Start both API services and verify the response from getPolicy.
 
 ## Tools & Technologies
 * Spring Boot, Spring Cloud
