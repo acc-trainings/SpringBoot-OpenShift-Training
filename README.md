@@ -1,19 +1,17 @@
-# Customer API
-
-# MongoDB
+# Policy API
 
 ## Prerequisties
 
-#### **`Create Atlas Account`**
- Create Free MongoDb Atlas account by following steps mentioned in create account URL.
-    * **Create Account:** Click [here](https://docs.atlas.mongodb.com/tutorial/create-atlas-account) 
+#### **`Policy API Base`**
+Refer Base Policy API code from below Github location.
+     Click [here](https://github.com/acc-trainings/policy-api) 
 
-#### **`IDE - MongoDB Compass`**
-1.	Check hardware and software requirements
-2.	Check system compatibility with platform software
-3.	Download MongoDB-Compass from following URL
-    * **Download:** Click [here](https://www.mongodb.com/try/download/compass) 
-    * **Geeting Started:** Click [here](https://docs.mongodb.com/compass/master/)
+#### **`MicroService communication development `**
+1.	Create your branch from Policy API repo
+2.	Run the code and see the response for getPolicy.
+3.	Now add the local Customer API call in the Policy API code. 
+3.	Start both API services and verify the response from getPolicy. 
+
 
 
 
