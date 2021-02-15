@@ -26,7 +26,7 @@ This is a quick reference guide to understand usages of key components & capabil
 * Package & Deploy
 
 **`policy-api`**
-* Donwload Policy API Github Repository
+* Donwload Policy API from Github Repository
 * Run the code and see the response for getPolicy.
 * Now add the local Customer API call in the Policy API code (webService/API call).
 * Start both API services and verify the response from getPolicy.
