@@ -15,5 +15,5 @@
 
 
 # Customer API
-1.	Continue to code further on your branch in Customer API code.   
-1.	Follow instructions provided in the session. 
+1.	Continue to code further on your branch in Customer API code to add call to Mongo DB.   
+2.	Follow guidelines provided in the session. 
