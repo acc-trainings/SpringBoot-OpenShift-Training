@@ -133,17 +133,7 @@ Follow this procedure to add a project to the ServiceMeshMemberRoll from the com
         oc create -n acctrainings-istio-system-<your first name> -f <Path of your yaml file>
    ```
 
-### **`Creating Istio Ingress Gateway for Istio System Namespace`** 
-
-* Look at the config [here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/istio-ingress-gateway.yaml), it has settings to allowing traffic to the gateway, to keep it simple for excercise, we will allow all http traffic
-
-* Run the following command to apply gateway:
-
-  ```javascript
-        oc apply -n acctrainings-istio-system-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/istio-ingress-gateway.yaml
-  ```
-
-### **`Creating Istio Ingress Gateway for Application Namespace`** 
+### **`Creating Istio Ingress Gateway`** 
 
 * Look at the config [here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/acctrainings-gateway.yaml), to keep it simple for demo, we will allow all http traffic
 
@@ -279,7 +269,7 @@ For this session, we will focus on Load balancing, Network resilience and testin
 
 ### **`Fault Injection and testing`**
 
-* Inject delays using Virtual service configuration
+* Inject delays using Virtual service configuration for Customer-api
 * Delete ```policy-api-virtual-service```
 * Look at fault section in the config [here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%203%20-%20Network%20resilience%20and%20Fault%20Injection/Policy-service-virtual-service-fault-injection.yaml).
 * Run the following command to apply fault injection configuration:

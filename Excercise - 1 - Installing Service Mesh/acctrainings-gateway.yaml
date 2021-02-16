@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: acctrainings-vikas-gateway
+  name: acctrainings-gateway
 spec:
   selector:
     istio: ingressgateway

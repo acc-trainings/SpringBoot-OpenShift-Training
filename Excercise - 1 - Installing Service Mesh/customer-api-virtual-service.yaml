@@ -4,9 +4,9 @@ metadata:
   name: customer-api-virtual-service
 spec:
   hosts:
-  - "*"
+  - '*.apps.awsopenshift.ne-innovation.com'
   gateways:
-  - acctrainings-vikas-gateway
+  - acctrainings-gateway
   http:
   - match:
     - uri:

@@ -4,15 +4,13 @@ metadata:
   name: policy-api-virtual-service
 spec:
   gateways:
-    - acctrainings-vikas-gateway
+    - acctrainings-gateway
   hosts:
-    - '*'
+    - '*.apps.awsopenshift.ne-innovation.com'
   http:
     - match:
         - uri:
             prefix: /policy
-        - uri:
-            prefix: /policies
       route:
         - destination:
             host: policy-api

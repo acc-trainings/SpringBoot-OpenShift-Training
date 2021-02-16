@@ -6,7 +6,7 @@ spec:
   hosts:
   - "*"
   gateways:
-  - acctrainings-vikas-gateway
+  - acctrainings-gateway
   http:
   - match:
     - uri:
