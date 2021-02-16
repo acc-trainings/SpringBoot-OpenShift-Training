@@ -3,13 +3,14 @@ kind: VirtualService
 metadata:
   name: customer-api-virtual-service
 spec:
-  hosts:
-    - customer-api
-  http:
-    - fault:
-        delay:
-          fixedDelay: 8s
-          percent: 100
-      route:
-        - destination:
-            host: customer-api
+  hosts:
+  - customer-api
+  http:
+  - fault:
+      delay:
+        fixedDelay: 7s
+        percentage:
+          value: 100
+    route:
+    - destination:
+        host: customer-api
