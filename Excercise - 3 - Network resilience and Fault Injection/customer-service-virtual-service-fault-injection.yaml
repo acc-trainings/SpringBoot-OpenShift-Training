@@ -3,6 +3,8 @@ kind: VirtualService
 metadata:
   name: customer-api-virtual-service
 spec:
+  gateways:
+  - acctrainings-gateway
   hosts:
   - '*.apps.awsopenshift.ne-innovation.com'
   http:

@@ -305,8 +305,6 @@ For this session, we will focus on Load balancing, Network resilience and testin
 * Delete ```customer-api-virtual-service```
 * Look at fault section in the config [here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%203%20-%20Network%20resilience%20and%20Fault%20Injection/customer-service-virtual-service-fault-injection.yaml).
 
-* We have removed ```gateways``` section as we do not want to expose customer-api to external world
-
 * Run the following command to apply fault injection configuration:
 
     ```javascript
@@ -314,6 +312,25 @@ For this session, we will focus on Load balancing, Network resilience and testin
     ```
 
 * Start refresing browser for policy-api to see 7s delay in response.
+
+* Removed ```gateways``` section as now we do not want to expose customer-api to external world, virtual service  should look like below
+
+    ```javascript
+            spec:
+            hosts:
+            - customer-api
+            http:
+            - fault:
+                delay:
+                    fixedDelay: 7s
+                    percentage:
+                    value: 100
+                route:
+                - destination:
+                    host: customer-api
+    ```
+
+* Refresh Customer-api browser
 
 ### **`Setting Timeouts and retries`**
 
