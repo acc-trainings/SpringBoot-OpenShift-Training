@@ -4,7 +4,7 @@ metadata:
   name: customer-api-virtual-service
 spec:
   hosts:
-  - customer-api
+  - '*.apps.awsopenshift.ne-innovation.com'
   http:
   - fault:
       delay:

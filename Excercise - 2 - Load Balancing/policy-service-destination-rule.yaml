@@ -3,7 +3,7 @@ kind: DestinationRule
 metadata:
   name: policy-api
 spec:
-  host: "*"
+  host: policy-api
   trafficPolicy:
     loadBalancer:
       simple: RANDOM #ROUND_ROBIN #Load Balancing

@@ -189,7 +189,6 @@ In order to move forward with service mesh, we will need Customer-api and policy
     ```
 
 * Check POD of the service - it will have 2 container in same pod
-* Test with istio gateway path
 
 ### **`Create Virtual Service`**
 
@@ -213,6 +212,8 @@ In order to move forward with service mesh, we will need Customer-api and policy
         oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%201%20-%20Installing%20Service%20Mesh/policy-api-virtual-service.yaml
     ```
 
+* Test with istio gateway path
+
 ## Traffic management
 
 Istio’s traffic routing rules let you easily control the flow of traffic and API calls between services. Istio simplifies configuration of service-level properties like circuit breakers, timeouts, and retries, and makes it easy to set up important tasks like A/B testing, canary rollouts, and staged rollouts with percentage-based traffic splits. It also provides out-of-box failure recovery features that help make your application more robust against failures of dependent services or the network.
@@ -220,6 +221,8 @@ Istio’s traffic routing rules let you easily control the flow of traffic and A
 For this session, we will focus on Load balancing, Network resilience and testing.
 
 ### Load Balancing
+
+## **`Random, Round Robin and Least Requests`**
 
 ### **`Deploy version 2 of Policy-api`**
 
@@ -246,6 +249,53 @@ For this session, we will focus on Load balancing, Network resilience and testin
     ```
 
 * Start refresing browser to see V1 and V2 of the policy service bringing data randomly.
+
+## **`Weighted Load Balancing`**
+
+* Weighted load balancing rules are applied at Virtual service level
+
+* Edit policy-api virtual service to look like below
+
+    ```javascript
+            spec:
+            gateways:
+                - acctrainings-gateway
+            hosts:
+                - '*.apps.awsopenshift.ne-innovation.com'
+            http:
+                - match:
+                    - uri:
+                        prefix: /policy
+                route:
+                    - destination:
+                        host: policy-api
+                        port:
+                        number: 8080
+                        subset: v1
+                    weight: 80
+                    - destination:
+                        host: policy-api
+                        port:
+                        number: 8080
+                        subset: v2
+                    weight: 20
+    ```
+
+* Edit policy-api destination rules to look like below
+
+    ```javascript
+            spec:
+            host: policy-api
+            subsets:
+                - labels:
+                    version: v1
+                name: v1
+                - labels:
+                    version: v2
+                name: v2
+    ```
+
+* Refresh Policy-api service browser to see most of the request are going to v1 of the service
 
 ### Network resilience and testing
 
