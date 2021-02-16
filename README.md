@@ -249,6 +249,22 @@ For this session, we will focus on Load balancing, Network resilience and testin
 
 ### Network resilience and testing
 
+### **`Fault Injection and testing`**
+
+* Inject delays using Virtual service configuration for Customer-api
+* Delete ```customer-api-virtual-service```
+* Look at fault section in the config [here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%203%20-%20Network%20resilience%20and%20Fault%20Injection/customer-service-virtual-service-fault-injection.yaml).
+
+* We have removed ```gateways``` section as we do not want to expose customer-api to external world
+
+* Run the following command to apply fault injection configuration:
+
+    ```javascript
+        oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%203%20-%20Network%20resilience%20and%20Fault%20Injection/customer-service-virtual-service-fault-injection.yaml
+    ```
+
+* Start refresing browser for policy-api to see 7s delay in response.
+
 ### **`Setting Timeouts and retries`**
 
 * Set timeout and retries setting in Policy-api-virtual-service.
@@ -267,15 +283,5 @@ For this session, we will focus on Load balancing, Network resilience and testin
         oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%203%20-%20Network%20resilience%20and%20Fault%20Injection/Policy-service-virtual-service-timeout.yaml
     ```
 
-### **`Fault Injection and testing`**
-
-* Inject delays using Virtual service configuration for Customer-api
-* Delete ```policy-api-virtual-service```
-* Look at fault section in the config [here](https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%203%20-%20Network%20resilience%20and%20Fault%20Injection/Policy-service-virtual-service-fault-injection.yaml).
-* Run the following command to apply fault injection configuration:
-
-    ```javascript
-        oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%203%20-%20Network%20resilience%20and%20Fault%20Injection/Policy-service-virtual-service-fault-injection.yaml
-    ```
-
-* Start refresing browser to see 7s delay in response.
+* You will observe policy-api will timeout as we have delayed customer-api call by 7 second
+* Play around by changing timeouts and delay in both services
