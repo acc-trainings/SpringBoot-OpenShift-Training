@@ -13,7 +13,7 @@ This is a quick reference guide to understand usages of key components & capabil
 * Day 4. [Microservices Communication](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/tree/4.microservices-communication), Containerization & Orchestration & OpenShift 
 * Day 5. [DevOps](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/tree/5.DevOps-CICD)
 * Day 6. [Spring boot Cloud Native using OpenShift Service Mesh](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/tree/6.service-mesh)
-* Day 7. Reactive Programming using Spring WebFlux
+* Day 7. [Reactive Programming using Spring WebFlux](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/tree/7.Reactive-Programming)
 
 ## Use Case
 **`customer-api`**
