@@ -18,8 +18,22 @@ In order to get the Jenkins pipeline related file into your dedicated branch , p
 
 * Go to Git Desktop
 * Make sure you are in your dedicated branch 
+
+<kbd>![pic1](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/Upload_to_main/pic1.png) </kbd>
+
+
 * From the Menu bar , go to “Branch” and click on “Update from Main”
+
+
+<kbd>![pic2](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/Upload_to_main/pic2.png) </kbd>
+
+
 * Once done , Click on the “Push Origin”
+
+
+<kbd>![pic3](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/Upload_to_main/pic3.png) </kbd>
+
+
 * Once done, The files from the Main branch will be available in your dedicated Branch
 
 
