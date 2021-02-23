@@ -250,6 +250,8 @@ e.	Once changes is applied, commit the changes.
 
 <kbd>![pic5](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/7.Verify_Deployment/pic5.png)</kbd>
 
+* Run route 
+routeURL/customer-api/swagger-ui
 
 This concludes the demo session.
 
