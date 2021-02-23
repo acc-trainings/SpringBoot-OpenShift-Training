@@ -161,12 +161,12 @@ e.	Commit the changes.
 `Before`
 
 
-<kbd>![pic1](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/5.appdeployfile_changes/pic1.png)</kbd>
+<kbd>![pic1](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/appdeploy_/pic1.png)</kbd>
 
 `After`
 
 
-<kbd>![pic2](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/5.appdeployfile_changes/pic2.png)</kbd>
+<kbd>![pic2](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/appdeploy_/pic2.png)</kbd>
 
 
 e.	Once changes is applied, commit the changes.
