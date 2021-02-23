@@ -96,16 +96,16 @@ Since we already know that Image are getting created and pushed into Quay.io, Op
 ConfigRepo is a GitHub repository name in which the appdeploy.yaml file resides. ArgoCD listen the latest changes in this file and initial the deployment into OpenShift project
 
 * Go to https://github.com/acc-trainings/customer-api-configrepo
-* Click on the “main” and Provide the branch name. As per demo naming standards it should be “acctrainings-initialname”. For this demo purpose, it would be “acctrainings-ketan”
+* Click on the “main” and Provide the branch name. As per demo naming standards it should be “customer-api-configrepo-initialname”. For this demo purpose, it would be “customer-api-configrepo-ketan”
 * Click on “Create branch”
 
 
-<kbd>![pic3](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/2.Branch_Creation/pic3.png)</kbd>
+<kbd>![pic1](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/Branch_/pic1.png)</kbd>
 
 * It will get clone of all the files that are available in “main” branch.
 * Verify that the branch is created successfully.
 
-<kbd>![pic4](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/2.Branch_Creation/pic4.png)</kbd>
+<kbd>![pic2](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/Branch_/pic2.png)</kbd>
 
 
 
@@ -121,7 +121,7 @@ ConfigRepo is a GitHub repository name in which the appdeploy.yaml file resides.
 * Select “Automatic” from drop down in “SYNC POLICY” field
 * Check “PRUNE RESOUECES”.
 * In the “Source” section, select repo URL from drop down in “Repsitory URL” field.
-* Provide branch name as “acctrainings-initialname” in “Revision” field. For this demo purpose, it would be “acctrainings-ketan”
+* Provide branch name as “customer-api-configrepo-initialname” in “Revision” field. For this demo purpose, it would be “customer-api-configrepo-ketan”
 * Provide “.” (dot) in the “Path” field
 * In the “Destination” section, select default URL from drop down in “Cluster URL” field
 * Provide name as “acctrainings-initialname” in “namespace” field. For this demo purpose, it would be “acctrainings-ketan”
@@ -145,7 +145,7 @@ ConfigRepo is a GitHub repository name in which the appdeploy.yaml file resides.
 
 <kbd>![pic1](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/4.Jenkinsfile_Changes/pic1.png)</kbd>
 
-* Replace the “main” with the branch name you have created which is “acctrainings-initialname”. For this demo purpose, it would be “acctrainings-ketan”
+* Replace the “main” with the branch name you have created which is “customer-api-initialname”. For this demo purpose, it would be “customer-api-ketan”
 
 <kbd>![pic2](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/4.Jenkinsfile_Changes/pic2.png)</kbd>
 
@@ -156,7 +156,7 @@ e.	Commit the changes.
 * Go to your source code GitHub Repo branch
 * Navigate to the “Deployment Folder”
 * Open “appdeploy.yaml” file in edit mode
-* Find “initial” and replace it with your initial name.
+* Find “initial” and replace it with your initial name for all the entries.
 
 `Before`
 
@@ -250,9 +250,9 @@ e.	Once changes is applied, commit the changes.
 
 <kbd>![pic5](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/7.Verify_Deployment/pic5.png)</kbd>
 
-* Run route 
+* Verify the Route
 
-routeURL/customer-api/swagger-ui
+Open browser and hit the URL  -->  routeURL/customer-api/swagger-ui
 
 This concludes the demo session.
 
