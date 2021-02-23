@@ -147,7 +147,7 @@ ConfigRepo is a GitHub repository name in which the appdeploy.yaml file resides.
 
 * Replace the “main” with the branch name you have created which is “customer-api-initialname”. For this demo purpose, it would be “customer-api-ketan”
 
-<kbd>![pic2](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/4.Jenkinsfile_Changes/pic2.png)</kbd>
+<kbd>![pic2](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/Jenkins_/pic1.png)</kbd>
 
 e.	Commit the changes.
 
