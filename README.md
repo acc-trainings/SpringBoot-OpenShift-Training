@@ -13,3 +13,5 @@ Spring WebFlux is parallel version of Spring MVC and supports fully non-blocking
 Spring WebFlux uses project reactor as reactive library. Reactor is a Reactive Streams library and, therefore, all of its operators support non-blocking back pressure. It is developed in close collaboration with Spring.
 
 ## References
+
+1. [Netty Event Loop & Threading Model](https://livebook.manning.com/book/netty-in-action/chapter-7/1)
