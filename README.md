@@ -126,10 +126,10 @@ ConfigRepo is a GitHub repository name in which the appdeploy.yaml file resides.
 * In the “Destination” section, select default URL from drop down in “Cluster URL” field
 * Provide name as “acctrainings-initialname” in “namespace” field. For this demo purpose, it would be “acctrainings-ketan”
 
-<kbd>![pic2](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/3.ArgoCD_Setup/pic2.png)</kbd>
+<kbd>![pic2](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/argo_/pic1.png)</kbd>
 
 
-<kbd>![pic3](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/3.ArgoCD_Setup/pic3.png)</kbd>
+<kbd>![pic3](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/argo_/pic2.png)</kbd>
 
 * Click on the create as top.
 
