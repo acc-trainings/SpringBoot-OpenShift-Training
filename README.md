@@ -208,7 +208,7 @@ e.	Once changes is applied, commit the changes.
 * Go to https://quay.io/repository/acctrainings/customer-api?tab=tags
 * Verify that the image is created successfully. Image name should be suffixed with the your name 
 
-<kbd>![pic1](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/7.Verify_Deployment/pic1.png)</kbd>
+<kbd>![pic1](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/all/pic1.png)</kbd>
 
 
 ## 2. ConfigRepo file changes
@@ -217,7 +217,7 @@ e.	Once changes is applied, commit the changes.
 * Go to your Branch name
 * Verify that the recent commit timestamp on “appdeploy.yaml” file. It should be recent.
 
-<kbd>![pic6](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/7.Verify_Deployment/pic6.png)</kbd>
+<kbd>![pic6](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/all/pic3.png)</kbd>
 
 
 ## 3. ArgoCD Sync
@@ -225,13 +225,13 @@ e.	Once changes is applied, commit the changes.
 * Go to https://argocd-server-argocd.apps.awsopenshift.ne-innovation.com/applications
 * Click on the project with your name.
 
-<kbd>![pic2](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/7.Verify_Deployment/pic2.png)</kbd>
+<kbd>![pic2](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/all/pic5.png)</kbd>
 
 
 * Verify that sync process is successful and showing “Synced” and “Sync OK”
 
 
-<kbd>![pic3](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/7.Verify_Deployment/pic3.png)</kbd>
+<kbd>![pic3](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/all/pic2.png)</kbd>
 
 
 
@@ -248,7 +248,7 @@ e.	Once changes is applied, commit the changes.
 * Once in the pods, you should be able to see the pod is in running state. 
 
 
-<kbd>![pic5](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/7.Verify_Deployment/pic5.png)</kbd>
+<kbd>![pic5](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/all/pic4.png)</kbd>
 
 * Verify the Route
 
