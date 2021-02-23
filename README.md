@@ -77,19 +77,7 @@ Since we already know that Image are getting created and pushed into Quay.io, Op
 
 ## 3. Branch creation in GitHub Repo
 
-### 2.1 Create branch from Source Code Repo
-
-* Go to the Source Code Repo
-* Click on the “main” and Provide the branch name. As per demo naming standards it should be “acctrainings-initialname”. For this demo purpose, it would be “acctrainings-ketan”
-* Click on “Create branch”
-
-<kbd>![pic1](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/2.Branch_Creation/pic1.png)</kbd>
-
-* Verify that the branch is created successfully.
-
-<kbd>![pic2](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/2.Branch_Creation/pic2.png)</kbd>
-
-### 2.2 Create branch from ConfigRepo
+### 3.1 Create branch from ConfigRepo
 
 ConfigRepo is a GitHub repository name in which the appdeploy.yaml file resides. ArgoCD listen the latest changes in this file and initial the deployment into OpenShift project
 
