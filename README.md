@@ -12,7 +12,18 @@ Let’s start our Journey:
 
 # A. Pre-requisite setup
 
-## 1. OpenShift Project Setup
+## 1. Update from Main 
+
+In order to get the Jenkins pipeline related file into your dedicated branch , please follow the below steps .
+
+* Go to Git Desktop
+* Make sure you are in your dedicated branch 
+* From the Menu bar , go to “Branch” and click on “Update from Main”
+* Once done , Click on the “Push Origin”
+* Once done, The files from the Main branch will be available in your dedicated Branch
+
+
+## 2. OpenShift Project Setup
 
 ### 1.1 If Project is not setup in OpenShift already, follow the below steps to create a project.
 
@@ -64,7 +75,7 @@ Since we already know that Image are getting created and pushed into Quay.io, Op
 * The credentials setup is completed successfully.
 
 
-## 2. Branch creation in GitHub Repo
+## 3. Branch creation in GitHub Repo
 
 ### 2.1 Create branch from Source Code Repo
 
@@ -96,7 +107,7 @@ ConfigRepo is a GitHub repository name in which the appdeploy.yaml file resides.
 
 
 
-## 3. ArgoCD Project Setup
+## 4. ArgoCD Project Setup
 
 * Go to https://argocd-server-argocd.apps.awsopenshift.ne-innovation.com/applications
 * Click on “+ New App”
@@ -124,7 +135,7 @@ ConfigRepo is a GitHub repository name in which the appdeploy.yaml file resides.
 
 * The Project setup in ArgoCD is completed.
 
-## 4. Jenkinsfile changes in your branch
+## 5. Jenkinsfile changes in your branch
 
 * Go to your source code GitHub Repo branch
 * Click on the “Jenkinsfile” and click on “edit”
@@ -138,7 +149,7 @@ ConfigRepo is a GitHub repository name in which the appdeploy.yaml file resides.
 
 e.	Commit the changes.
 
-## 5. Appdeploy.yaml file changes in your branch
+## 6. Appdeploy.yaml file changes in your branch
 
 * Go to your source code GitHub Repo branch
 * Navigate to the “Deployment Folder”
