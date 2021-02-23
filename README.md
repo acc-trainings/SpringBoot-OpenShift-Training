@@ -179,25 +179,25 @@ e.	Once changes is applied, commit the changes.
 * Once the Operation is completed, you will be able to see your pipeline job which would be exactly the name as your branch name in source code repo.
 
 
-<kbd>![pic1](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/6.JenkinsConsole_Setup/pic1.png)</kbd>
+<kbd>![pic1](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/Jenkinsjob_/pic1.png)</kbd>
 
 * Click on the pipeline job.
 * Click on “Build” option from left hand side menu
 
 
-<kbd>![pic2](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/6.JenkinsConsole_Setup/pic2.png)</kbd>
+<kbd>![pic2](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/Jenkinsjob_/pic3.png)</kbd>
 
 * Upon click , the pipeline job will be triggered. 
 
 
-<kbd>![pic3](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/6.JenkinsConsole_Setup/pic2.png)</kbd>
+<kbd>![pic3](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/Jenkinsjob_/pic2.png)</kbd>
 
 
 * Wait until pipeline job run completed
 * Pipeline job build and deploy is completed successfully.
 
 
-<kbd>![pic4](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/6.JenkinsConsole_Setup/pic4.png)</kbd>
+<kbd>![pic4](https://github.com/acc-trainings/SpringBoot-OpenShift-Training/blob/5.DevOps-CICD/Images/Jenkinsjob_/pic4.png)</kbd>
 
 
 
