@@ -281,7 +281,13 @@ For this session, we will focus on Load balancing, Network resilience and testin
                     weight: 20
     ```
 
-* Edit policy-api destination rules to look like below
+* Alternativey delete ```policy-api-virtual-service``` and run following command to add new virtual service
+
+    ```javascript
+        oc apply -n acctrainings-<your first name> -f https://raw.githubusercontent.com/acc-trainings/SpringBoot-OpenShift-Training/6.service-mesh/Excercise%20-%202%20-%20Load%20Balancing/policy-service-virtual-weighted-load-balancing.yaml
+    ```
+
+* Edit policy-api destination rules to remove trafficPolicy
 
     ```javascript
             spec:
